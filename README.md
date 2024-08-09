@@ -35,7 +35,7 @@ La pagina tiene que ser Full Responsive.
 // ENTREGABLES
 
 Se espera un proyecto que contenga todo lo anterior y mas
-Documentacion importante de su proyecto, mockups y
+documentacion importante del proyecto, mockups y
 diseño, herramientas usadas.
 Repositorio con los avances y ayudas de todos en commits
 Presentacion final sustentando su trabajo
