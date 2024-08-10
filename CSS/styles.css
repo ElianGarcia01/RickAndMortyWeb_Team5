@@ -11,8 +11,8 @@ body{
     min-height: 100vh;
 }
 
-.carousel-item img{
-    height: 88vh;
+.carousel_size{
+    height: 75vh;
     object-fit: cover;
 }
 
