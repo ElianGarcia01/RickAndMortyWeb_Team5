@@ -26,17 +26,8 @@ body{
 }
 
 .imageH {
-    height: 33vh;
-    min-width: 20vw;
+    max-height: 55vh;
     object-fit: cover;
-}
-
-.resize_textarea {
-    resize: none;
-}
-
-td{
-    width: 33.3%;
 }
 
 .icon_footer {
