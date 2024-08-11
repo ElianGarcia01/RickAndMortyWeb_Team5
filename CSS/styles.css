@@ -1,0 +1,54 @@
+.image{
+    max-width: 10.5rem;   
+}
+
+.carousel-caption h5{
+    font-size: 2rem;
+}
+
+body{
+    background-color: #3c3c35;
+    min-height: 100vh;
+}
+
+.carousel_size{
+    height: 75vh;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.imageH {
+    height: 33vh;
+    min-width: 20vw;
+    object-fit: cover;
+}
+
+.resize_textarea {
+    resize: none;
+}
+
+td{
+    width: 33.3%;
+}
+
+.icon_footer {
+    height: 2rem;
+    width: 2rem;
+}
+
+footer h3{
+    margin-bottom: 2rem;
+    font-size: 1rem;  
+}
+
+.copyright{
+    font-size: 0.7rem;
+}
