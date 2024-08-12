@@ -10,7 +10,7 @@ body {
     background-color: #3c3c35;
 }
 
-#container_principal {
+.container_principal {
     display: flex;
     flex-direction: column;
     min-height: 100vh;

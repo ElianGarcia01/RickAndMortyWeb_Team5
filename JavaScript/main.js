@@ -10,10 +10,10 @@ const app = createApp({
     return {
       personajes: [],
       personajesCopy: [],
-      categorias: [],
       textoBuscador: '',
-      categoriaSelec: [],
-      detalles: {}
+      genderSelec: [],
+      detalles: {},
+      gender: []
     }
 
   },
@@ -27,6 +27,7 @@ const app = createApp({
 
         this.personajesCopy = data.results.filter(personaje => !personaje.status.includes('unknown'))
         this.personajes = data.results.filter(personaje => !personaje.status.includes('unknown'))
+        this.gender = Array.from(new Set(this.personajes.map(event => event.gender)))
         this.productoDetails()
       })
 
@@ -34,14 +35,9 @@ const app = createApp({
     productoDetails() {
       // URL Search Params
       const urlParams = new URLSearchParams(window.location.search)
-
       const idGet = urlParams.get('id')
-      console.log(idGet);
-      
 
       this.detalles = this.personajesCopy.find(producto => producto.id === parseInt(idGet))
-      console.log(this.detalles);
-      
     }
 
   },
@@ -52,10 +48,10 @@ const app = createApp({
       let filtroTexto = this.personajesCopy.filter(personaje => personaje.name.toLowerCase().includes(this.textoBuscador.toLowerCase()))
 
       // Verificar si el arreglo de categorias seleccionadas se encuentre vacio o no
-      if (this.categoriaSelec.length == 0) {
+      if (this.genderSelec.length == 0) {
         this.personajes = filtroTexto
       } else {
-        this.personajes = filtroTexto.filter(personaje => personaje.category.includes(this.categoriaSelec))
+        this.personajes = filtroTexto.filter(personaje => personaje.gender.includes(this.genderSelec))
       }
     }
   }
