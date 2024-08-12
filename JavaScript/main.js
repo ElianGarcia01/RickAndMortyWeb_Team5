@@ -13,6 +13,7 @@ const app = createApp({
       categorias: [],
       textoBuscador: '',
       categoriaSelec: [],
+      detalles: {}
     }
 
   },
@@ -26,8 +27,21 @@ const app = createApp({
 
         this.personajesCopy = data.results.filter(personaje => !personaje.status.includes('unknown'))
         this.personajes = data.results.filter(personaje => !personaje.status.includes('unknown'))
+        this.productoDetails()
       })
 
+    },
+    productoDetails() {
+      // URL Search Params
+      const urlParams = new URLSearchParams(window.location.search)
+
+      const idGet = urlParams.get('id')
+      console.log(idGet);
+      
+
+      this.detalles = this.personajesCopy.find(producto => producto.id === parseInt(idGet))
+      console.log(this.detalles);
+      
     }
 
   },
