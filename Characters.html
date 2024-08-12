@@ -56,11 +56,10 @@
             <div class="container mb-5">
                 <!-- INICIA SECCION DE FILTROS (CHECKS Y BUSQUEDA POR TEXTO)-->
                 <div class="my-5">
-                    {{CharactersFilter}}
                     <div class="row g-5 d-flex justify-content-around">
                         <!-- SECCION CHECKS -->
+                        {{CharactersFilter}}
                         <div class="col col-12 col-md-3 checkbox-container">
-                            <!-- SECCION CHECKS -->
                             <div class="col d-flex overflow-auto checkbox-container">
                                 <div v-for="personaje in gender" class="form-check form-check-inline">
                                     <input v-model="genderSelec" class="form-check-input border-2 border-dark"

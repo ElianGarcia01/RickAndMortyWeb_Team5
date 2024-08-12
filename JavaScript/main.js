@@ -13,7 +13,7 @@ const app = createApp({
       textoBuscador: '',
       genderSelec: [],
       detalles: {},
-      gender: []
+      gender: [],
     }
 
   },
@@ -51,7 +51,7 @@ const app = createApp({
       if (this.genderSelec.length == 0) {
         this.personajes = filtroTexto
       } else {
-        this.personajes = filtroTexto.filter(personaje => personaje.gender.includes(this.genderSelec))
+        this.personajes = filtroTexto.filter(personaje => this.genderSelec.some(seleccionado => personaje.gender.includes(seleccionado)))
       }
     }
   }
