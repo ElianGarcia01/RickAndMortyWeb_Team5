@@ -120,27 +120,14 @@
             </button>
         </div>
 
-        <!-- INICIA CONTENEDOR DE DOS SECCIONES (FILTROS Y CONTENIDO)-->
 
         <div class="container mb-5">
-
-            <!-- INICIA SECCION DE FILTROS (CHECKS Y BUSQUEDA POR TEXTO)-->
-
             <div class="mt-4 mb-5">
-                {{CharactersFilter}}
                 <div class="row g-4">
-                    <!-- SECCION CHECKS -->
-                    <div class="col d-flex overflow-auto checkbox-container">
-                        <div class="form-check form-check-inline">
-                            <input v-model="categoriaSelec" class="form-check-input border-2 border-dark"
-                                type="checkbox" :value="" :id="">
-                            <label class="form-check-label" :for="">{{}}</label>
-                        </div>
-                    </div>
-                    <!-- SECCION SEARCH TEXT -->
                     <div class="col col-12 col-md-4">
-                        <form class="d-flex" role="search">
-                            <input v-model="textoBuscador" class="form-control me-2 border-2 border-dark " type="search"
+                        <form id="searchForm" class="d-flex" role="search">
+                            <input id="searchInput" v-model="textoBuscador"
+                                class="form-control me-2 border-2 border-dark" type="search"
                                 placeholder="Search for episodes..." aria-label="Search">
                             <button class="btn btn-outline-success border-2" type="submit">Search</button>
                         </form>
@@ -148,7 +135,6 @@
                 </div>
             </div>
         </div>
-        <!--  AQUI FINALIZA EL CONTENEDOR DE LAS DOS SECCIONES -->
 
         <div class="container my-5">
             <h1 class="text-center mb-4">Rick and Morty Episodes</h1>
