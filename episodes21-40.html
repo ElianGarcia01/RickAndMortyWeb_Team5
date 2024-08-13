@@ -123,21 +123,21 @@
 
         <div class="container mb-5">
             <div class="mt-4">
-                <!-- SECCIÓN SEARCH TEXT -->
-                <div class="col col-12 col-md-4">
-                    <form id="searchForm" class="d-flex" role="search">
-                        <input id="searchInput" class="form-control me-2 border-2 border-dark" type="search"
-                            placeholder="Search for episodes..." aria-label="Search">
-                        <button class="btn btn-outline-success border-2" type="submit">Search</button>
-                    </form>
-                </div>
-
-                <!-- SECCIÓN SORT SELECT -->
-                <div class="col col-12 col-md-4 mt-3">
-                    <select id="sortSelect" class="form-select border-2 border-dark">
-                        <option value="asc">Sort by Air Date: Ascending</option>
-                        <option value="desc">Sort by Air Date: Descending</option>
-                    </select>
+                <!-- SECCIÓN SEARCH TEXT Y SORT SELECT -->
+                <div class="d-flex justify-content-between">
+                    <div class="col col-12 col-md-4">
+                        <form id="searchForm" class="d-flex" role="search">
+                            <input id="searchInput" class="form-control me-2 border-2 border-dark" type="search"
+                                placeholder="Search for episodes..." aria-label="Search">
+                            <button class="btn btn-outline-success border-2" type="submit">Search</button>
+                        </form>
+                    </div>
+                    <div class="col col-12 col-md-4">
+                        <select id="sortSelect" class="form-select border-2 border-dark">
+                            <option value="asc">Sort by Air Date: Ascending</option>
+                            <option value="desc">Sort by Air Date: Descending</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
