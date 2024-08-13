@@ -61,99 +61,91 @@
 
     <main id="app">
 
-        <div class="pageCointainer">
-            <div class="contentWrap">
-                <div class="container container-fluid my-4">
+        <h1 class="text-center">Location</h1>
 
-                    <div class="row  mb-4">
-                        <div class="position-relative col-sm-3 ">
-                            <div class="selectLocation">
-                                <select id="mySelect"
-                                    class="form-select custom-select  text-center responsive-select selectLocation "
-                                    aria-label="Default select example" v-model="filtroUbicacion"
-                                    v-on:change="filtrarPersonajesPorUbicacion">
-                                    <option value="">Locations</option>
-                                    <option v-for="ubicacion in ubicaciones" :key="ubicacion.id" :value="ubicacion.id"
-                                        class="">
-                                        {{ ubicacion.name }}
-                                    </option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-sm-9">
+        <div class="position-relative container-fluid justify-content-center col-sm-3 ">
+            <div class="selectLocation">
+                <select id="mySelect"
+                    class="form-select custom-select justify-content-center text-center responsive-select selectLocation "
+                    aria-label="Default select example" v-model="filtroUbicacion"
+                    v-on:change="filtrarPersonajesPorUbicacion">
+                    <option value="">Choose a travel destiny...</option>
+                    <option  v-for="ubicacion in ubicaciones" :key="ubicacion.id"
+                        :value="ubicacion.id" class="">
+                        {{ ubicacion.name }}
+                    </option>
 
-                            <h1 class="text-center titleCharacters my-1 ">Location</h1>
-                            <h3 v-if="ubicacionSeleccionada" class="text-center textLocation  my-4 display-5 fw-bold">
-                                {{ ubicacionSeleccionada.name }}
-                            
-                            </h3>
-                            <h4 v-if="ubicacionSeleccionada" class="text-center textLocation  my-4">
-                               Type: {{ ubicacionSeleccionada.type }}
-                            
-                            </h4>
-                            <div class="containerCards d-flex flex-wrap justify-content-center">
-                                <div class="card mx-2 my-4 cardCharaters col-xs-12 col-sm-6 col-md-6 col-lg-4 position-relative"
-                                    style="width: 18rem;" v-for="personaje in personajesFiltrados" :key="personaje.id">
-                                    <span v-if="personaje.status === 'Alive'"
-                                        class="badge text-bg-success position-absolute top-0 end-0 m-3 p-2 fs-5">
-                                        {{ personaje.status }}
-                                    </span>
-                                    <span v-else-if="personaje.status === 'Dead'"
-                                        class="badge text-bg-danger position-absolute top-0 end-0 m-3 p-2 fs-5">
-                                        {{ personaje.status }}
-                                    </span>
-                                    <span v-else="personaje.status === 'unknown'"
-                                        class="badge text-bg-secondary position-absolute top-0 end-0 m-3 p-2 fs-5">
-                                        {{ personaje.status }}
-                                    </span>
 
-                                    <img :src="personaje.image" class="card-img-top imageCards" :alt="personaje.name">
+                </select>
+            </div>
+        </div>
 
-                                    <div class="card-body">
-                                        <h5 class="card-title fs-3">{{ personaje.name }}</h5>
-                                        <p class="card-text fs-5 mt-4">Species: {{ personaje.species }}</p>
-                                        <p class="card-text fs-5 mt-4">Last Location: {{ personaje.location.name }}
-                                        </p>
-                                    </div>
-                                    <div class="card-body">
-                                        <a :href="'/pages/detalis.html?id=' + personaje.id" class="btn">Details</a>
-                                    </div>
-                                </div>
-                            </div>
+        <h4 v-if="ubicacionSeleccionada" class="text-center textLocation  my-4">
+            Type: {{ ubicacionSeleccionada.type }}
+        </h4>
+        <h2 class="text-center textLocation  my-4" v-if="filtroUbicacion !== '' && ubicaciones.length > 0">Scanned
+            activity:</h2>
 
-                            <div v-if="personajesFiltrados.length === 0 && filtroUbicacion !== ''"
-                                class="text-center my-4">
-                                <h2 class="my-3 text-center display-4 fw-bold textLocation">No signs of life...
-                                </h2>
-                                <img src="https://i.makeagif.com/media/9-27-2017/nUtqD4.gif"
-                                    class="img-fluid imageLocation" alt="Empty location">
-                            </div>
+        <div class="containerCards d-flex flex-wrap justify-content-center">
+            <div class="card mx-2 my-4 cardCharaters col-xs-12 col-sm-6 col-md-6 col-lg-4 position-relative"
+                style="width: 18rem;" v-for="personaje in personajesFiltrados" :key="personaje.id">
+                <span v-if="personaje.status === 'Alive'"
+                    class="badge text-bg-success position-absolute top-0 end-0 m-3 p-2 fs-5">
+                    {{ personaje.status }}
+                </span>
+                <span v-else-if="personaje.status === 'Dead'"
+                    class="badge text-bg-danger position-absolute top-0 end-0 m-3 p-2 fs-5">
+                    {{ personaje.status }}
+                </span>
+                <span v-else="personaje.status === 'unknown'"
+                    class="badge text-bg-secondary position-absolute top-0 end-0 m-3 p-2 fs-5">
+                    {{ personaje.status }}
+                </span>
 
-                            <div v-if="filtroUbicacion === '' && ubicaciones.length > 0" class="text-center my-4">
+                <img :src="personaje.image" class="card-img-top imageCards" :alt="personaje.name">
 
-                                <h4 class="my-1 text-center display-4 fw-bold textLocation">Enter the portal...</h4>
-                                <div class="my-4">
-
-                                    <img src="https://clipground.com/images/portal-rick-and-morty-png-2.gif"
-                                        class="mb-4 imageLocation" alt="Select a location Rick">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="card-body">
+                    <h5 class="card-title fs-3">{{ personaje.name }}</h5>
+                    <p class="card-text fs-5 mt-4">Species: {{ personaje.species }}</p>
+                    <p class="card-text fs-5 mt-4">Last Location: {{ personaje.location.name }}
+                    </p>
+                </div>
+                <div class="card-body">
+                    <a :href="'/pages/detalis.html?id=' + personaje.id" class="btn">Details</a>
                 </div>
             </div>
+        </div>
+
+        <div v-if="personajesFiltrados.length === 0 && filtroUbicacion !== ''" class="text-center my-4">
+            <h2 class="my-3 text-center display-4 fw-bold textLocation">No signs of life...
+            </h2>
+            <img src="https://th.bing.com/th/id/OIG3.bBCImcniUOg5abMRlzlU?pid=ImgGn" class="img-fluid imageLocation"
+                alt="Empty location">
+        </div>
+
+        <div v-if="filtroUbicacion === '' && ubicaciones.length > 0" class="text-center my-4">
+
+            <h4 class="my-1 text-center display-4 fw-bold textLocation">Enter the portal...</h4>
+            <div class="my-4">
+
+                <img src="https://clipground.com/images/portal-rick-and-morty-png-2.gif" class="img-fluid imageLocation"
+                    alt="Select a location Rick">
+
+            </div>
+
+        </div>
 
 
-                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-                        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-                        crossorigin="anonymous"></script>
-                    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 
 
-                    <script src="./JavaScript/locations.js" type="module"></script>
-             
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
+
+        <script src="./JavaScript/locations.js" type="module"></script>
+
     </main>
 
 

@@ -6,11 +6,14 @@ const app = Vue.createApp({
             ubicaciones: [],
             filtroUbicacion: '',
             personajesFiltrados: [],
+            
         };
+        
     },
     created() {
 
         this.traerData();
+        
     },
     methods: {
 
@@ -45,7 +48,8 @@ const app = Vue.createApp({
         },
 
         filtrarPersonajesPorUbicacion() {
-
+            const audio = new Audio('./Recursos/portal-gun-sound-effect.mp3');
+            audio.play();
             if (!this.filtroUbicacion) {
                 this.personajesFiltrados = [];
 
@@ -53,12 +57,14 @@ const app = Vue.createApp({
             }
             
             const datosUbicacionUrl = `${urlLocation}${this.filtroUbicacion}`;
+            
 
             fetch(datosUbicacionUrl)
                 .then(response => response.json())
                 .then(data => {
                     console.log("Datos de la ubicación:", data);
-
+                   
+              
                     let residentesUrls = data.residents;
                     return this.obtenerDetallesPersonajes(residentesUrls);
                 })
@@ -85,9 +91,9 @@ const app = Vue.createApp({
         },
     },
     
+    
 });
 
-
-
 app.mount('#app');
+
 

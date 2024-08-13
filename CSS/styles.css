@@ -52,3 +52,10 @@ footer h3{
 .copyright{
     font-size: 0.7rem;
 }
+
+
+/* locations*/
+.imageLocation{
+    width: 400px;
+    object-fit: contain;
+}
