@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const episodesContainer = document.getElementById('episodesContainer');
     const searchInput = document.getElementById('searchInput');
+    const sortSelect = document.getElementById('sortSelect');
     let episodes = [];
 
     // Lista de imágenes
@@ -95,8 +96,24 @@ document.addEventListener('DOMContentLoaded', function () {
         displayEpisodes(filteredEpisodes);
     }
 
+    // Función para ordenar episodios por fecha
+    function sortEpisodes(order) {
+        const sortedEpisodes = [...episodes].sort((a, b) => {
+            const dateA = new Date(a.air_date);
+            const dateB = new Date(b.air_date);
+            return order === 'asc' ? dateA - dateB : dateB - dateA;
+        });
+        displayEpisodes(sortedEpisodes);
+    }
+
     // Evento de búsqueda
     searchInput.addEventListener('input', filterEpisodes);
+
+    // Evento de ordenamiento
+    sortSelect.addEventListener('change', function () {
+        const order = sortSelect.value;
+        sortEpisodes(order);
+    });
 
     // Cargar episodios al iniciar
     fetchEpisodes();

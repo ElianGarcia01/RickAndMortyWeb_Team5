@@ -122,23 +122,29 @@
 
 
         <div class="container mb-5">
-            <div class="mt-4 mb-5">
-                <div class="row g-4">
-                    <div class="col col-12 col-md-4">
-                        <form id="searchForm" class="d-flex" role="search">
-                            <input id="searchInput" v-model="textoBuscador"
-                                class="form-control me-2 border-2 border-dark" type="search"
-                                placeholder="Search for episodes..." aria-label="Search">
-                            <button class="btn btn-outline-success border-2" type="submit">Search</button>
-                        </form>
-                    </div>
+            <div class="mt-4">
+                <!-- SECCIÓN SEARCH TEXT -->
+                <div class="col col-12 col-md-4">
+                    <form id="searchForm" class="d-flex" role="search">
+                        <input id="searchInput" class="form-control me-2 border-2 border-dark" type="search"
+                            placeholder="Search for episodes..." aria-label="Search">
+                        <button class="btn btn-outline-success border-2" type="submit">Search</button>
+                    </form>
+                </div>
+
+                <!-- SECCIÓN SORT SELECT -->
+                <div class="col col-12 col-md-4 mt-3">
+                    <select id="sortSelect" class="form-select border-2 border-dark">
+                        <option value="asc">Sort by Air Date: Ascending</option>
+                        <option value="desc">Sort by Air Date: Descending</option>
+                    </select>
                 </div>
             </div>
-        </div>
 
-        <div class="container my-5">
-            <h1 class="text-center mb-4">Rick and Morty Episodes</h1>
-            <div id="episodesContainer" class="row row-cols-1 row-cols-md-3 g-4"></div>
+            <div class="container my-5">
+                <h1 class="text-center mb-4">Rick and Morty Episodes</h1>
+                <div id="episodesContainer" class="row row-cols-1 row-cols-md-3 g-4"></div>
+            </div>
         </div>
 
     </main>
