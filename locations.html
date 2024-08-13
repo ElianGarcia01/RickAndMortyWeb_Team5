@@ -70,12 +70,9 @@
                     aria-label="Default select example" v-model="filtroUbicacion"
                     v-on:change="filtrarPersonajesPorUbicacion">
                     <option value="">Choose a travel destiny...</option>
-                    <option  v-for="ubicacion in ubicaciones" :key="ubicacion.id"
-                        :value="ubicacion.id" class="">
+                    <option v-for="ubicacion in ubicaciones" :key="ubicacion.id" :value="ubicacion.id" class="">
                         {{ ubicacion.name }}
                     </option>
-
-
                 </select>
             </div>
         </div>
