@@ -1,58 +1,40 @@
-// API Rick And Morty
-let urlApi = "https://rickandmortyapi.com/api/character"
+import * as modulo from '../JavaScript/Modules.js'
 
-// Crear una constante para llamar una funcion
-const { createApp } = Vue
+// SELECCION DE ELEMENTOS EN EL DOM
+let contenedorTarjetas = document.getElementById("contenedorTarjetas")
+let containerChecks = document.getElementById("containerChecks")
+let buscarTexto = document.getElementById('buscarTexto')
 
-// createApp es una funcion que recibe un objeto
-const app = createApp({
-  data() {
-    return {
-      personajes: [],
-      personajesCopy: [],
-      textoBuscador: '',
-      genderSelec: [],
-      detalles: {},
-      gender: [],
-    }
+// Variables Universales
+let data
+let eventos
+let propiedadesUnicas
 
-  },
-  created() {
-    this.obtenerDatos(urlApi)
+// Funcion para obtener informacion de la API
+function cargarDatos() {
+  modulo.obtenerDatos()
+    .then(datos => {
+      data = datos
+      eventos = data.results
+      console.log(eventos)
+      
+      propiedadesUnicas = [...new Set(eventos.map(event => event.category))]
 
-  },
-  methods: {
-    obtenerDatos(url) {
-      fetch(url).then(response => response.json()).then(data => {
+      // Importar funciones pintarTarjetas y checkboxs
+      modulo.pintarTarjetas(eventos, contenedorTarjetas)
+      modulo.pintarCheckboxs(propiedadesUnicas, containerChecks)
+    })
+    .catch(error => console.error('Error al cargar los datos:', error))
+}
 
-        this.personajesCopy = data.results.filter(personaje => !personaje.status.includes('unknown'))
-        this.personajes = data.results.filter(personaje => !personaje.status.includes('unknown'))
-        this.gender = Array.from(new Set(this.personajes.map(event => event.gender)))
-        this.productoDetails()
-      })
+// Funcion para cargar la funcion importadas
+function actualizarFiltros() {
+  let texto = buscarTexto.value.toLowerCase()
+  let checkboxesMarcados = Array.from(document.querySelectorAll('#containerChecks input[type=checkbox]')).filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+  modulo.filtrarEventos(eventos, texto, checkboxesMarcados, contenedorTarjetas);
+}
 
-    },
-    productoDetails() {
-      // URL Search Params
-      const urlParams = new URLSearchParams(window.location.search)
-      const idGet = urlParams.get('id')
-
-      this.detalles = this.personajesCopy.find(producto => producto.id === parseInt(idGet))
-    }
-
-  },
-  computed: {
-    // FILTRO PARA PAGINA HOME
-    CharactersFilter() {
-      // Filtro de texto
-      let filtroTexto = this.personajesCopy.filter(personaje => personaje.name.toLowerCase().includes(this.textoBuscador.toLowerCase()))
-
-      // Verificar si el arreglo de categorias seleccionadas se encuentre vacio o no
-      if (this.genderSelec.length == 0) {
-        this.personajes = filtroTexto
-      } else {
-        this.personajes = filtroTexto.filter(personaje => this.genderSelec.some(seleccionado => personaje.gender.includes(seleccionado)))
-      }
-    }
-  }
-}).mount('#page')  //Montar en el createApp en el contenedor main
+// EVENTOS
+window.addEventListener('load', cargarDatos)
+buscarTexto.addEventListener('input', actualizarFiltros)
+containerChecks.addEventListener('change', actualizarFiltros)
