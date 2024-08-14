@@ -55,7 +55,7 @@
 
 
         <div id="containerPLocation" class="fs-4 p-5 text-center">
-            <p>"Look, Morty, I've created something special! It's like a 'Hitchhiker's Guide to the Galaxy' but without all the existential fluff. With this Portal you can explore all those whacky worlds we've visited. Want to know who lives on Planet Squanch? Well, there you go! It's like having an interdimensional portal in your pocket, but without the risk of turning into a pickle!"</p>
+            <p id="pLocation">"Look, Morty, I've created something special! It's like a 'Hitchhiker's Guide to the Galaxy' but without all the existential fluff. With this Portal you can explore all those whacky worlds we've visited. Want to know who lives on Planet Squanch? Well, there you go! It's like having an interdimensional portal in your pocket, but without the risk of turning into a pickle!"</p>
         </div>
         
         <div class="d-flex justify-content-center align-items-center">
@@ -78,15 +78,15 @@
             <div class="card mx-2 my-4 cardCharaters col-xs-12 col-sm-6 col-md-6 col-lg-4 position-relative"
                 style="width: 18rem;" v-for="personaje in personajesFiltrados" :key="personaje.id">
                 <div class="card-content justify-content-center">
-                    <span v-if="personaje.status === 'Alive'" class="badge text-bg-success position-absolute">
+                    <span v-if="personaje.status === 'Alive'" class="badge text-bg-success position-absolute ms-2 mt-2">
                         {{ personaje.status }}
                     </span>
 
-                    <span v-else-if="personaje.status === 'Dead'" class="badge text-bg-danger position-absolute">
+                    <span v-else-if="personaje.status === 'Dead'" class="badge text-bg-danger position-absolute ms-2 mt-2">
                         {{ personaje.status }}
 
                     </span>
-                    <span v-else="personaje.status === 'unknown'" class="badge text-bg-secondary position-absolute ">
+                    <span v-else="personaje.status === 'unknown'" class="badge text-bg-secondary position-absolute ms-2 mt-2">
                         {{ personaje.status }}
                     </span>
 
@@ -159,7 +159,7 @@
 
 
 
-    <footer class="text-center footer-style bg-dark text-light">
+    <footer class="text-center text-light">
         <div class="container">
             <div class="row pt-4">
                 <div class="col-12 col-md-6 mb-4">
@@ -168,32 +168,33 @@
                         <li>
                             <a target="blank" href="https://www.facebook.com/RickandMorty/?locale=es_LA"
                                 class="btn-social">
-                                <img class="icon_footer" src="./Recursos/facebook.png" alt="facebook">
+                                <img class="icon_footer" src="./Recursos/facebook2.svg" alt="facebook">
                             </a>
                         </li>
                         <li>
-                            <a target="blank" href="https://www.instagram.com/RickandMorty/">
+                            <a target="blank" href="https://www.instagram.com/RickandMorty/" class="btn-social">
                                 <img class="icon_footer" src="./Recursos/instagram.png" alt="instagram">
                             </a>
                         </li>
                         <li>
-                            <a target="blank" href="https://www.whatsapp.com/?lang=es_LA" class="btn-social">
-                                <img class="icon_footer" src="./Recursos/whatsapp.png" alt="whatsapp">
+                            <a target="blank"
+                                href="https://x.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                                class="btn-social">
+                                <img class="icon_footer" src="./Recursos/twitter.png" alt="whatsapp">
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-6 mb-2">
-                    <h3>Company</h3>
+                <div class="col-md-6 mb-4">
+                    <h3>Cartoon Network</h3>
                     <a href="./index.html" class="btn-social">
-                        <img class="image" src="./Recursos/logo-letras.png" alt="">
+                        <img class="image" src="./Recursos/logo-letras.png" alt="cohort">
                     </a>
                     <p class="mt-2 copyright">&copy; 2024 Rick and Morty.</p>
                 </div>
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

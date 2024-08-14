@@ -14,7 +14,7 @@
 
 <body>
     <div class="principal">
-    <header class="sticky-top">
+    <header class="sticky-top" id="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand ms-3" href="index.html">
@@ -49,15 +49,13 @@
     </header>
     <div class="row">
         <div class="col-3 ps-5">
-            <!-- <video src="./Recursos/Morty y las ardillas - Trim.mp4" autoplay loop muted class="video">
-                
-            </video> -->
+            
         </div>
         <div class="col-5">
 
         </div>
         <div class="col-3">
-            <h1>Favoritos</h1>
+            <h1></h1>
         </div>
     </div>
 
@@ -65,6 +63,29 @@
     
 </div>
     <main>
+        <div class="welcome-section">
+            <div class="container">
+                <h2>Welcome to Rick & Morty MULTIVERSE!</h2>
+                <p>Our galery:</p>
+            </div>
+            <div class="image-slider" id="image-slider">
+                <div class="slide-track" id="slide-track">
+                    <!-- Repite tus imágenes tantas veces como sea necesario para que el slider parezca infinito -->
+                    <img src="./Recursos/carousel_black.jpg" alt="" class="slider">
+                    <img src="./Recursos/rick-and-morty-uhdpaper.com-hd-5.147.jpg" alt="" class="slider">
+                    <!-- ... más imágenes ... -->
+                    <img src="./Recursos/rick-and-morty-cartoon-uhdpaper.com-hd-8.321.jpg" alt="" class="slider">
+                    <img src="./Recursos/rick-and-morty-space-cruiser-burning-hd-wallpaper-uhdpaper.com-930@0@e.jpg" alt="" class="slider">
+                    <!-- ... más imágenes ... -->
+                    <img src="./Recursos/Portal.jpg" alt="" class="slider">
+                    <img src="./Recursos/space.jpg" alt="" class="slider">
+                    <!-- ... más imágenes ... -->
+                     <img src="./Recursos/rick-and-morty-aliens-uhdpaper.com-hd-5.108.jpg" alt="" class="slider">
+                     
+                </div>
+            </div>
+        </div>
+        
         <h1 class="text-center"></h1>
 
         <div id="carouselExampleCaptions" class="carousel carousel-fade slide">
@@ -107,7 +128,7 @@
                         <div class="overlay"></div>
                         <div class="carousel-caption">
                             <p>Secondary characters - Why not?</p>
-                            <h5 class="title"></h5>
+                            <h5 class="title">They also have their relevance</h5>
                         </div>
                     </div>
                     
@@ -115,7 +136,7 @@
                         <img src="./Recursos/carousel-portal.jpg" class="d-block w-100 carousel_size" alt="banner4">
                         <div class="overlay"></div>
                         <div class="carousel-caption">
-                            <h5 class="title">EPISODES</h5>
+                            <h5 class="title"></h5>
                             <p>Connect with Us! We are here to help you.</p>
                         </div>
                     </div>
@@ -140,12 +161,6 @@
                 </button>
             </div>
             
-            <div class="welcome-section">
-                <div class="container">
-                    <h2>¡Bienvenidos al multiverso de Rick y Morty!</h2>
-                    <p>Explora los personajes, lugares y episodios más icónicos.</p>
-                </div>
-            </div>
             
             <section class="latest-news">
                 <div class="container">
@@ -155,7 +170,7 @@
                         <div class="news-content">
                             <h4>Rick and Morty: The Anime</h4>
                             <p>Explore the Smith family's dealings with the Galactic Federation in this new anime series.</p>
-                            <a href="#" class="read-more">Read More</a>
+                            <a href="https://www.animenewsnetwork.com/encyclopedia/anime.php?id=25711" class="read-more link" target="_blank">Read More</a>
                         </div>
                     </div>
                     <div class="news-item">
@@ -163,7 +178,7 @@
                         <div class="news-content">
                             <h4>Season 8 Delayed to 2025</h4>
                             <p>Due to production delays, the anticipated Season 8 is now set for an early 2025 release.</p>
-                            <a href="#" class="read-more">Read More</a>
+                            <a href="https://www.vg247.com/rick-and-morty-season-8-2025-anime-spin-off" class="read-more" target="_blank">Read More</a>
                         </div>
                     </div>
                     <div class="news-item">
@@ -171,7 +186,7 @@
                         <div class="news-content">
                             <h4>Fear Hole Insights</h4>
                             <p>Discover the depths of Morty's character and Rick's fears in the latest Fear Hole episode.</p>
-                            <a href="#" class="read-more">Read More</a>
+                            <a href="https://screenrant.com/rick-enters-fear-hole-in-rick-and-morty/" class="read-more" target="_blank">Read More</a>
                         </div>
                     </div>
                     <!-- Add more .news-item as needed -->
@@ -194,7 +209,7 @@
                         </div>
                         
                     </div>
-                    <a href="#" class="btn-explore">know All Locations</a>
+                    <a href="./locations.html" class=" btn-explore">know All Locations</a>
                 </div>
             </section>
             
@@ -206,34 +221,36 @@
 
     <!-- AQUI COMIENZA EL FOOTER -->
 
-    <footer class="text-center footer-style bg-dark text-light">
+    <footer class="text-center text-light">
         <div class="container">
             <div class="row pt-4">
                 <div class="col-12 col-md-6 mb-4">
-                    <h3>MORE FROM RICK AND MORTY</h3>
-                    <ul class="list-unstyled d-flex justify-content-around">
+                    <h2 class="mb-5">MORE FROM RICK AND MORTY</h2>
+                    <ul class="list-unstyled d-flex justify-content-around mt-5">
                         <li>
                             <a target="blank" href="https://www.facebook.com/RickandMorty/?locale=es_LA"
                                 class="btn-social">
-                                <img class="icon_footer" src="./Recursos/facebook.png" alt="facebook">
+                                <img class="icon_footer" src="./Recursos/facebook2.svg" alt="facebook">
                             </a>
                         </li>
                         <li>
-                            <a target="blank" href="https://www.instagram.com/RickandMorty/">
+                            <a target="blank" href="https://www.instagram.com/RickandMorty/" class="btn-social">
                                 <img class="icon_footer" src="./Recursos/instagram.png" alt="instagram">
                             </a>
                         </li>
                         <li>
-                            <a target="blank" href="https://www.whatsapp.com/?lang=es_LA" class="btn-social">
-                                <img class="icon_footer" src="./Recursos/whatsapp.png" alt="whatsapp">
+                            <a target="blank"
+                                href="https://x.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                                class="btn-social">
+                                <img class="icon_footer" src="./Recursos/twitter.png" alt="whatsapp">
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-6 mb-2">
-                    <h3>Company</h3>
+                <div class="col-md-6 mb-4">
+                    <h3>Cartoon Network</h3>
                     <a href="./index.html" class="btn-social">
-                        <img class="image" src="./Recursos/logo-letras.png" alt="">
+                        <img class="image" src="./Recursos/logo-letras.png" alt="cohort">
                     </a>
                     <p class="mt-2 copyright">&copy; 2024 Rick and Morty.</p>
                 </div>

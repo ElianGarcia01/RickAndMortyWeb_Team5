@@ -78,20 +78,36 @@ function pintarContendedorTemporada(data) {
 }
 
 
-const contenedorPRemios = document.getElementById('contentPremios')
 
 function pintarContenedorPremios(data) {
-    console.log(data)
 
 
 }
 
 
 
+function pintarContenedorVoces(data) {
 
 
+}
 
+let lastScrollTop = 0; // Variable para guardar la última posición de scroll
+const navbar = document.querySelector('.navbar');
 
+window.addEventListener('scroll', function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll > lastScrollTop) {
+        // Scroll hacia abajo
+        navbar.style.top = '-100px'; // Ajusta este valor al alto de tu navbar
+    } else {
+        // Scroll hacia arriba
+        navbar.style.top = '0';
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Actualiza la última posición de scroll
+}, false);
+
+  
 
 
 
@@ -124,4 +140,8 @@ function pintarContenedorPremios(data) {
    });
 
    const episodios = temporadas[0].primeraEmision
+<<<<<<< HEAD
    console.log(episodios)*/
+=======
+   console.log(episodios)*/
+>>>>>>> dd932aa8fcc565ea1de65fc708b65ea7824db1b2

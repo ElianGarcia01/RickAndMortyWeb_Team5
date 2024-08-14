@@ -60,4 +60,58 @@ const { createApp } = Vue;
         }
       }
     }).mount('#page')
-  
+
+    let lastScrollTop = 0; // Variable para guardar la última posición de scroll
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll > lastScrollTop) {
+        // Scroll hacia abajo
+        navbar.style.top = '-100px'; // Ajusta este valor al alto de tu navbar
+    } else {
+        // Scroll hacia arriba
+        navbar.style.top = '0';
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Actualiza la última posición de scroll
+}, false);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.getElementById('header'); // Obtiene el header por su ID
+
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) { // Número de píxeles de scroll antes de cambiar el estilo
+          header.classList.add('scrolled');
+      } else {
+          header.classList.remove('scrolled');
+      }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const images = [
+      './Recursos/wallpaper.jpg',
+      './Recursos/wall2.jpg',
+      './Recursos/wall3.jpg',
+      './Recursos/wall4.jpg',
+  ];
+
+  const slideTrack = document.getElementById('slide-track');
+
+  // Función para crear y añadir imágenes al slider
+  function populateSlider(images, repeatTimes) {
+      for (let i = 0; i < repeatTimes; i++) {
+          images.forEach(src => {
+              const img = document.createElement('img');
+              img.src = src;
+              img.alt = '';
+              img.classList.add('slider');
+              slideTrack.appendChild(img);
+          });
+      }
+  }
+
+  // Llama a la función con las imágenes y el número de veces que quieres repetirlas
+  populateSlider(images, 10); // Ajusta el número de repeticiones según sea necesario
+});

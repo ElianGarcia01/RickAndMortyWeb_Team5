@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Get Schwifty';
-    src: url('/RickAndMortyWeb_Team5/Fonts/GetSchwifty-Regular.woff2') format('woff2'),
-        url('/RickAndMortyWeb_Team5/Fonts/GetSchwifty-Regular.woff') format('woff');
+    src: url('../Fonts/GetSchwifty-Regular.woff2') format('woff2'),
+        url('../Fonts/GetSchwifty-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -31,7 +31,7 @@
 .navbar-nav .nav-item:hover {
     transform: scale(1.2);
     /* Aumenta el tamaño del elemento */
-    z-index: 10;
+
     /* Asegura que el elemento se muestre sobre los demás */
 }
 
@@ -62,14 +62,29 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    z-index: -1;
     transform: translate(-50%, -50%);
     animation: spinPortal 5s linear infinite;
 }
 
 /* Asegúrate de que el resto del navbar no se vea afectado */
 .navbar {
-    background-color: transparent
+    background-color: transparent;
+    transition: top 0.3s;
+    /* Transición suave */
+    position: fixed;
+    /* Posición fija */
+    width: 100%;
+    /* Ancho completo */
+    top: 0;
+    /* Inicia en la parte superior */
+    z-index: 2000;
+    /* Asegúrate de que esté por encima de otros elementos */
+}
+
+/* Clase para ocultar el navbar */
+.navbar-hide {
+    top: -100px;
+    /* Ajusta este valor al alto de tu navbar */
 }
 
 
@@ -79,16 +94,30 @@ header.sticky-top {
     border: none;
 }
 
+.badge:hover {
+    transform: scale(1.2);
+    /* Aumenta el tamaño del elemento */
+
+    /* Asegura que el elemento se muestre sobre los demás */
+    color: #22db6c;
+    /* Color cian brillante para el texto */
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #244e09;
+    background-color: #0223184f;
+    border-radius: 150px;
+
+}
+
 .principal {
-    background-image: url('/RickAndMortyWeb_Team5/Recursos/rick-and-morty-art-4k-wallpaper-uhdpaper.com-214@0@j.jpg');
+    background-image: url('../Recursos/rick-and-morty-art-4k-wallpaper-uhdpaper.com-214@0@j.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     height: 100vh;
     width: 100%;
     position: relative;
-    z-index: 1;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .video-background {
@@ -115,6 +144,47 @@ header.sticky-top {
     /* Ejemplo de altura */
     margin-right: -4px;
     /* Elimina el espacio entre imágenes inline-block */
+}
+
+#image-slider {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#slide-track {
+    display: flex;
+    animation: scrollImages 30s linear infinite;
+}
+
+.slider {
+    width: 250px;
+    /* Ajusta el ancho según tus imágenes */
+    height: 150px;
+    /* Ajusta la altura según tus imágenes */
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Animación que mueve las imágenes */
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Detiene la animación cuando el mouse está encima */
+#slide-track:hover {
+    animation-play-state: paused;
+}
+
+/* Efecto hover para las imágenes */
+.slider:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 @keyframes scrollImages {
@@ -235,6 +305,10 @@ header.sticky-top {
     margin-bottom: 40px;
 }
 
+#detailsApp {
+    width: 100%;
+}
+
 .universe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -251,6 +325,20 @@ header.sticky-top {
 .planet-card:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    /* Color inicial de fondo */
+    background-color: #f0f0f0;
+}
+
+.card:hover {
+
+    background-color: rgba(77, 198, 200, 0.644);
+    border-style: solid 90px;
+    transform: scale(1.05);
+
 }
 
 .planet-card img {
@@ -276,6 +364,9 @@ header.sticky-top {
     padding: 0 15px;
 }
 
+#main2 {
+    margin-top: 100px;
+}
 
 .image {
     max-width: 10.5rem;
@@ -288,8 +379,21 @@ header.sticky-top {
     background-color: black;
 }
 
+#pLocation {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#tarjeta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
 #page {
     flex: 1;
+    margin-top: 50px;
 }
 
 .imageH {
@@ -309,6 +413,58 @@ footer h3 {
 
 .copyright {
     font-size: 0.7rem;
+}
+
+#episodesContainer .card-img-top {
+    width: 100%;
+    height: 200px;
+    /* Ajusta la altura*/
+    object-fit: cover;
+    /*imagen cubra el área sin distorsionarse */
+}
+
+footer {
+    font-family: Get Schwifty, 'Oswald', sans-serif;
+    background-color: #000000;
+}
+
+#seasonsContainer .card-img-top {
+    width: 100%;
+    height: 200px;
+    /* Ajusta la altura*/
+    object-fit: cover;
+    /*imagen cubra el área sin distorsionarse */
+}
+
+/* Estilo para las tarjetas en el contenedor de episodios */
+#episodesContainer .card {
+    transition: border 0.3s ease, transform 0.3s ease;
+    border: 10px solid transparent;
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+#episodesContainer .card:hover {
+    border-color: green;
+    transform: scale(1.05);
+}
+
+#episodesContainer .card-img-top {
+    transition: opacity 0.3s ease;
+}
+
+#seasonsContainer .card:hover {
+    border-color: green;
+    transform: scale(1.05);
+}
+
+#seasonsContainer .card-img-top {
+    transition: opacity 0.3s ease;
+}
+
+
+#seasonsContainer .card {
+    transition: border 0.3s ease, transform 0.3s ease;
+    border: 10px solid transparent;
 }
 
 .pagination-dark {
@@ -340,12 +496,17 @@ footer h3 {
     border-color: #454d55 !important;
 }
 
+.carousel {
+    z-index: 1;
+    /* Disminuye este valor si es necesario */
+}
+
 .carousel-caption h5 {
     font-size: 2rem;
 }
 
 body {
-    background-color: #3c3c35;
+    background: linear-gradient(to bottom, #a8a8a8 0%, #000000 100%);
     margin: 0;
     padding: 0;
 }
@@ -357,8 +518,38 @@ body {
 }
 
 main {
-    flex: 1;
+    position: relative;
+
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    /* Sombra interior para dar profundidad */
+    box-shadow: inset 0 0 10px #000000;
+    /* Otros estilos para tu main */
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+    margin: 20px;
+    overflow: hidden;
 }
+
+main h2,
+p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    /* Ajusta según la altura de la sombra que desees */
+    left: 0;
+    right: 0;
+    height: 10px;
+    /* Ajusta según la altura de la sombra que desees */
+    box-shadow: 0 10px 15px -5px rgba(255, 0, 0, 0.889);
+    z-index: 10;
+    /* Asegúrate de que este valor sea mayor que el del fondo para que la sombra se proyecte sobre él */
+}
+
 
 .carousel_size {
     height: 75vh;
@@ -443,13 +634,6 @@ footer h3 {
     transform: scale(1.05); /* Agranda ligeramente el texto al hacer hover */
     box-shadow: 0 5px 15px rgba(0, 255, 30, 0.5); /* Sombra verde brillante */
 }
-
-
-
-
-
-
-
 
 
 @media(min-width: 768px) {
