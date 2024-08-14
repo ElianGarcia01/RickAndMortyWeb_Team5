@@ -588,7 +588,7 @@ footer h3 {
 
 /* --------------------------------------------PAGINA INFORMATION HECHA POR SEBAS----------------------------- */
 .cssFont_1 {
-    font-family: 'Get Schwifty','Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 60px;
     letter-spacing: 1px;
     color: #00ff1e;
@@ -620,7 +620,7 @@ footer h3 {
 }
 
 .rick-morty-text p {
-    font-family: 'Get Schwifty', Arial, sans-serif; /* Fuente personalizada que recuerda la estética de Rick y Morty */
+    font-family: 'Oswald', Arial, sans-serif; /* Fuente personalizada que recuerda la estética de Rick y Morty */
     color: #00ff1e; /* Verde brillante, similar al color de los portales */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para dar un efecto de profundidad */
     background: linear-gradient(90deg, #3a3a3a, #1e1e1e); /* Fondo con un degradado oscuro */
