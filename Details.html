@@ -49,32 +49,22 @@
             </nav>
         </header>
     
-        <main id="page">
+        <main>
             <!-- SECCION DE TARJETA -->
-            <div class="container-fluid my-5">
-                <div class="row row-cols-2  d-flex justify-content-center">
-                    <div class="col">
-                        <div class="card border border-1 border-dark bg-success-subtle">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img :src="detalles.image" class="card-img rounded-start" :alt="detalles.name">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body d-flex flex-column justify-content-center align-items-center h-100">
-                                        <h5 class="card-title mb-4">{{detalles.name}}</h5>
-                                        <p class="card-text">Status: {{detalles.status}}</p>
-                                        <p class="card-text">Species: {{detalles.species}}</p>
-                                        <p class="card-text">Gender: {{detalles.gender}}</p>
-                                        <div class="d-flex justify-content-center">
-                                            <a href="./"
-                                                class="btn btn-dark w-100">Location</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div id="detailsApp" class="container mt-5">
+                <div v-if="character" class="card">
+                    <img :src="character.image" class="card-img-top imageH" :alt="character.name">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ character.name }}</h5>
+                        <p class="card-text"><strong>Especie:</strong> {{ character.species }}</p>
+                        <p class="card-text"><strong>Estado:</strong> {{ character.status }}</p>
+                        <p class="card-text"><strong>Género:</strong> {{ character.gender }}</p>
+                        <p class="card-text"><strong>Origen:</strong> {{ character.origin.name }}</p>
+                        <p class="card-text"><strong>Ubicación actual:</strong> {{ character.location.name }}</p>
+                        <a href="./Characters.html" class="btn btn-dark">Back to Characters</a>
                     </div>
                 </div>
+                <div v-else class="alert alert-warning">Loading character details...</div>
             </div>
         </main>
     
@@ -121,7 +111,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="/JavaScript/main.js"></script>
+    <script src="/JavaScript/details.js"></script>
 </body>
 
 </html>
