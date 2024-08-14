@@ -140,8 +140,4 @@ window.addEventListener('scroll', function() {
    });
 
    const episodios = temporadas[0].primeraEmision
-<<<<<<< HEAD
    console.log(episodios)*/
-=======
-   console.log(episodios)*/
->>>>>>> dd932aa8fcc565ea1de65fc708b65ea7824db1b2
