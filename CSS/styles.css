@@ -59,3 +59,7 @@ footer h3{
     width: 400px;
     object-fit: contain;
 }
+
+#containerPLocation{
+    color: white;
+}

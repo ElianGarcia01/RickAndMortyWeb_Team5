@@ -49,6 +49,7 @@ const app = Vue.createApp({
 
         filtrarPersonajesPorUbicacion() {
             const audio = new Audio('./Recursos/portal-gun-sound-effect.mp3');
+            audio.volume = 0.1; // Ajusta el volumen entre 0.0 (silencio) y 1.0 (máximo)
             audio.play();
             if (!this.filtroUbicacion) {
                 this.personajesFiltrados = [];
@@ -97,3 +98,4 @@ const app = Vue.createApp({
 app.mount('#app');
 
 
+///
