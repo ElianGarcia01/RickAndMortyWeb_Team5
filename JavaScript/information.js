@@ -1,7 +1,5 @@
 async function consumirApis() {
     try {
-
-
         //Aca se consume la api general 
         const apisebas = await fetch("https://api-creada.vercel.app/api/sebastian")
         const data = await apisebas.json()
