@@ -83,6 +83,11 @@ const app = Vue.createApp({
             let detallesPromesas = residentesUrls.map(url => fetch(url).then(response => response.json()));
             return Promise.all(detallesPromesas);
         },
+        mostrarUbicacionAleatoria() {
+            const ubicacionAleatoria = this.ubicaciones[Math.floor(Math.random() * this.ubicaciones.length)];
+            this.filtroUbicacion = ubicacionAleatoria.id;
+            this.filtrarPersonajesPorUbicacion();
+        }
     },
 
     computed: {

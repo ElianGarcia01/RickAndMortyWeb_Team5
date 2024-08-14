@@ -56,10 +56,15 @@ footer h3{
 
 /* locations*/
 .imageLocation{
-    width: 400px;
+    width: 350px;
     object-fit: contain;
 }
 
 #containerPLocation{
     color: white;
+}
+
+
+.portalIf{
+    width: 200px;
 }
