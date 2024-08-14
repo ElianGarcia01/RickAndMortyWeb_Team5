@@ -1,26 +1,17 @@
-.image {
-    max-width: 10.5rem;
+.image{
+    max-width: 10.5rem;   
 }
 
-.carousel-caption h5 {
+.carousel-caption h5{
     font-size: 2rem;
 }
 
-body {
+body{
     background-color: #3c3c35;
-}
-
-.container_principal {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
 }
 
-main {
-    flex: 1;
-}
-
-.carousel_size {
+.carousel_size{
     height: 75vh;
     object-fit: cover;
 }
@@ -35,8 +26,17 @@ main {
 }
 
 .imageH {
-    max-height: 55vh;
+    height: 33vh;
+    min-width: 20vw;
     object-fit: cover;
+}
+
+.resize_textarea {
+    resize: none;
+}
+
+td{
+    width: 33.3%;
 }
 
 .icon_footer {
@@ -44,11 +44,27 @@ main {
     width: 2rem;
 }
 
-footer h3 {
+footer h3{
     margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 1rem;  
 }
 
-.copyright {
+.copyright{
     font-size: 0.7rem;
+}
+
+
+/* locations*/
+.imageLocation{
+    width: 350px;
+    object-fit: contain;
+}
+
+#containerPLocation{
+    color: white;
+}
+
+
+.portalIf{
+    width: 200px;
 }
