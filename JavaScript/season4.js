@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         "https://upload.wikimedia.org/wikipedia/en/a/a1/Rick_and_Morty_OST.jpg"
     ];
 
+
     // Obtener episodios de la Season 4 (ID 32-41)
     const promises = [];
     for (let i = 32; i <= 41; i++) {

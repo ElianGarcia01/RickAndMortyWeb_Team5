@@ -94,6 +94,7 @@ footer h3 {
     transition: opacity 0.3s ease;
 }
 
+
 #seasonsContainer .card {
     transition: border 0.3s ease, transform 0.3s ease;
     border: 10px solid transparent;

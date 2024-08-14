@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
     }
 
+
     // Insertar las cards de las temporadas en el contenedor
     seasons.forEach(season => {
         seasonsContainer.innerHTML += createSeasonCard(season);

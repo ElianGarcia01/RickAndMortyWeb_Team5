@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         "https://upload.wikimedia.org/wikipedia/en/a/a1/Rick_and_Morty_OST.jpg"
     ];
 
+
     // Obtener episodios de la Season 2 (ID 12-21)
     const promises = [];
     for (let i = 12; i <= 21; i++) {

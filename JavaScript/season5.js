@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
     const episodes = await Promise.all(promises);
 
+
     // Función para crear una card para cada episodio
     function createEpisodeCard(episode, index) {
         const initialImage = episodeImages[index % episodeImages.length];

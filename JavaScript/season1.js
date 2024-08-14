@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', async function () {
        `;
     }
 
+
     // Función para mostrar episodios
     function displayEpisodes(episodesToDisplay) {
         let row = '<div class="row">';
