@@ -26,7 +26,7 @@ const { createApp } = Vue;
             .then(data => {
               this.personajes = data.results
               this.totalPages = data.info.pages
-              this.currentPage = page;
+              this.currentPage = page
             })
             .catch(error => console.error('Error al llamar los datos:', error))
         },
@@ -34,7 +34,7 @@ const { createApp } = Vue;
           if (page > 0 && page <= this.totalPages) {
             this.fetchCharacters(page)
           }
-        },
+        }    
       },
       computed: {
         filteredCharacters() {
@@ -56,8 +56,8 @@ const { createApp } = Vue;
           for (let i = startPage; i <= endPage; i++) {
             pages.push(i)
           }
-          
           return pages
         }
       }
     }).mount('#page')
+  

@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Get Schwifty';
+  src: url('/RickAndMortyWeb_Team5/Fonts/GetSchwifty-Regular.woff2') format('woff2'),
+    url('/RickAndMortyWeb_Team5/Fonts/GetSchwifty-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

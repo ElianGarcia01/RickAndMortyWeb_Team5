@@ -39,10 +39,10 @@
                                 <a class="nav-link" aria-current="page" href="./Locations.html">LOCATIONS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="">EPISODES</a>
+                                <a class="nav-link" aria-current="page" href="./Episodes.html">EPISODES</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="">INFORMATION</a>
+                                <a class="nav-link" aria-current="page" href="./information.html">INFORMATION</a>
                             </li>
                         </ul>
                     </div>
@@ -124,7 +124,8 @@
                                 <p class="card-text">Estado: {{ character.status }}</p>
                                 <p class="card-text">Género: {{ character.gender }}</p>
                                 <div class="d-flex justify-content-end">
-                                    <a :href="'Details.html?id=' + character.id" class="btn btn-dark">Details</a>
+                                    <a :href="'./Details.html?id=' + character.id" class="btn btn-dark">Details</a>
+                                
                                 </div>
                             </div>
                         </div>
@@ -198,6 +199,7 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./JavaScript/main.js"></script>
+    <script src="./JavaScript/details.js"></script>
 </body>
 
 </html>
