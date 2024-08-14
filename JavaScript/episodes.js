@@ -52,3 +52,21 @@ document.addEventListener('DOMContentLoaded', function () {
         seasonsContainer.innerHTML += createSeasonCard(season);
     });
 });
+
+let lastScrollTop = 0; // Variable para guardar la última posición de scroll
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll > lastScrollTop) {
+        // Scroll hacia abajo
+        navbar.style.top = '-100px'; // Ajusta este valor al alto de tu navbar
+    } else {
+        // Scroll hacia arriba
+        navbar.style.top = '0';
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Actualiza la última posición de scroll
+}, false);
+
+  

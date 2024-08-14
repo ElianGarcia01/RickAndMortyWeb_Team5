@@ -14,7 +14,7 @@
 
 <body>
     <div class="principal">
-    <header class="sticky-top">
+    <header class="sticky-top" id="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand ms-3" href="index.html">
@@ -49,15 +49,13 @@
     </header>
     <div class="row">
         <div class="col-3 ps-5">
-            <!-- <video src="./Recursos/Morty y las ardillas - Trim.mp4" autoplay loop muted class="video">
-                
-            </video> -->
+            
         </div>
         <div class="col-5">
 
         </div>
         <div class="col-3">
-            <h1>Favoritos</h1>
+            <h1></h1>
         </div>
     </div>
 
@@ -65,6 +63,29 @@
     
 </div>
     <main>
+        <div class="welcome-section">
+            <div class="container">
+                <h2>Welcome to Rick y Morty multiverse!</h2>
+                <p>Our galery:</p>
+            </div>
+            <div class="image-slider" id="image-slider">
+                <div class="slide-track" id="slide-track">
+                    <!-- Repite tus imágenes tantas veces como sea necesario para que el slider parezca infinito -->
+                    <img src="./Recursos/carousel_black.jpg" alt="" class="slider">
+                    <img src="./Recursos/rick-and-morty-uhdpaper.com-hd-5.147.jpg" alt="" class="slider">
+                    <!-- ... más imágenes ... -->
+                    <img src="./Recursos/rick-and-morty-cartoon-uhdpaper.com-hd-8.321.jpg" alt="" class="slider">
+                    <img src="./Recursos/rick-and-morty-space-cruiser-burning-hd-wallpaper-uhdpaper.com-930@0@e.jpg" alt="" class="slider">
+                    <!-- ... más imágenes ... -->
+                    <img src="./Recursos/Portal.jpg" alt="" class="slider">
+                    <img src="./Recursos/space.jpg" alt="" class="slider">
+                    <!-- ... más imágenes ... -->
+                     <img src="./Recursos/rick-and-morty-aliens-uhdpaper.com-hd-5.108.jpg" alt="" class="slider">
+                     
+                </div>
+            </div>
+        </div>
+        
         <h1 class="text-center"></h1>
 
         <div id="carouselExampleCaptions" class="carousel carousel-fade slide">
@@ -140,12 +161,6 @@
                 </button>
             </div>
             
-            <div class="welcome-section">
-                <div class="container">
-                    <h2>¡Bienvenidos al multiverso de Rick y Morty!</h2>
-                    <p>Explora los personajes, lugares y episodios más icónicos.</p>
-                </div>
-            </div>
             
             <section class="latest-news">
                 <div class="container">
