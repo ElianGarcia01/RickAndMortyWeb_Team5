@@ -82,7 +82,7 @@ function pintarContendedorTemporada(data) {
 
 
 function pintarContenedorPremios(data) {
-
+    console.log(data)
 
 }
 
