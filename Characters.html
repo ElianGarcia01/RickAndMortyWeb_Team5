@@ -36,7 +36,7 @@
                                 <a class="nav-link active" aria-current="page" href="Characters.html">CHARACTERS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./Locations.html">LOCATIONS</a>
+                                <a class="nav-link" aria-current="page" href="">LOCATIONS</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="">EPISODES</a>
@@ -62,49 +62,55 @@
                     <div class="col-md-3">
                         <h3 class="text-center text-light mb-3">Gender</h3>
                         <select v-model="filters.gender" class="form-control">
-                            <option value="">Todos los géneros</option>
-                            <option value="Male">Masculino</option>
-                            <option value="Female">Femenino</option>
-                            <option value="Genderless">Sin género</option>
-                            <option value="unknown">Desconocido</option>
+                            <option value="">All genres</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Genderless">Genderless</option>
+                            <option value="unknown">Unknown</option>
                         </select>
                     </div>
                     <div class="col-md-3">
                         <h3 class="text-center text-light mb-3">Status</h3>
                         <select v-model="filters.status" class="form-control">
-                            <option value="">Todos los estados</option>
-                            <option value="Alive">Vivo</option>
-                            <option value="Dead">Muerto</option>
-                            <option value="unknown">Desconocido</option>
+                            <option value="">All states</option>
+                            <option value="Alive">Live</option>
+                            <option value="Dead">Dead</option>
+                            <option value="unknown">Unknown</option>
                         </select>
                     </div>
                     <div class="col-md-3">
                         <h3 class="text-center text-light mb-3">Species</h3>
                         <select v-model="filters.species" class="form-control">
-                            <option value="">Todas las especies</option>
-                            <option value="Human">Humano</option>
-                            <option value="Alien">Extraterrestre</option>
-                            <option value="unknown">Desconocido</option>
+                            <option value="">All species</option>
+                            <option value="Human">Human</option>
+                            <option value="Alien">Alien</option>
+                            <option value="unknown">Unknown</option>
                         </select>
                     </div>
                 </div>
 
                 <!-- SECCION DE PAGINACION -->
-                <div class="d-flex justify-content-center my-4">
-                    <nav v-if="filteredCharacters.length > 0">
-                        <ul class="pagination pagination-dark">
-                            <li class="page-item" :class="{ disabled: currentPage === 1 }">
-                                <a class="page-link" @click="changePage(currentPage - 1)" href="#">Anterior</a>
-                            </li>
-                            <li v-for="page in pagesToShow" :key="page" class="page-item"
-                                :class="{ active: currentPage === page }">
-                                <a class="page-link" @click="changePage(page)" href="#">{{ page }}</a>
-                            </li>
-                            <li class="page-item" :class="{ disabled: currentPage === totalPages }">
-                                <a class="page-link" @click="changePage(currentPage + 1)" href="#">Siguiente</a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="container mt-5">
+                    <div class="d-flex justify-content-center my-4">
+                        <nav v-if="filteredCharacters.length > 0" aria-label="Page navigation">
+                            <ul class="pagination pagination-dark pagination-sm pagination-md pagination-lg">
+                                <li class="page-item" :class="{ disabled: currentPage === 1 }">
+                                    <a class="page-link" @click="changePage(currentPage - 1)" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li v-for="page in pagesToShow" :key="page" class="page-item"
+                                    :class="{ active: currentPage === page }">
+                                    <a class="page-link" @click="changePage(page)" href="#">{{ page }}</a>
+                                </li>
+                                <li class="page-item" :class="{ disabled: currentPage === totalPages }">
+                                    <a class="page-link" @click="changePage(currentPage + 1)" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
 
                 <!-- Mensaje cuando no hay personajes -->
@@ -113,17 +119,19 @@
                     No se encontraron personajes con los filtros aplicados.
                 </div>
 
-                <!-- Tarjetas de personajes -->
-                <div v-if="filteredCharacters.length > 0" class="row">
-                    <div v-for="character in filteredCharacters" :key="character.id" class="col-md-3 mb-4">
-                        <div class="card border-dark">
-                            <img :src="character.image" class="card-img-top" :alt="character.name">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ character.name }}</h5>
-                                <p class="card-text">Especie: {{ character.species }}</p>
-                                <p class="card-text">Estado: {{ character.status }}</p>
-                                <p class="card-text">Género: {{ character.gender }}</p>
-                                <div class="d-flex justify-content-end">
+                <div class="container mt-5">
+                    <!-- Tarjetas de personajes -->
+                    <div v-if="filteredCharacters.length > 0" class="row">
+                        <div v-for="character in filteredCharacters" :key="character.id" class="col-md-3 mb-4">
+                            <div class="card border-dark">
+                                <img :src="character.image" class="card-img-top" :alt="character.name">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">{{ character.name }}</h5>
+                                    <p class="card-text">Especie: {{ character.species }}</p>
+                                    <p class="card-text">Estado: {{ character.status }}</p>
+                                    <p class="card-text">Género: {{ character.gender }}</p>
+                                </div>
+                                <div class="card-footer">
                                     <a :href="'details.html?id=' + character.id" class="btn btn-dark">Details</a>
                                 </div>
                             </div>
@@ -132,21 +140,27 @@
                 </div>
 
                 <!-- SECCION DE PAGINACION -->
-                <div class="d-flex justify-content-center my-4">
-                    <nav v-if="filteredCharacters.length > 0">
-                        <ul class="pagination pagination-dark">
-                            <li class="page-item" :class="{ disabled: currentPage === 1 }">
-                                <a class="page-link" @click="changePage(currentPage - 1)" href="#">Anterior</a>
-                            </li>
-                            <li v-for="page in pagesToShow" :key="page" class="page-item"
-                                :class="{ active: currentPage === page }">
-                                <a class="page-link" @click="changePage(page)" href="#">{{ page }}</a>
-                            </li>
-                            <li class="page-item" :class="{ disabled: currentPage === totalPages }">
-                                <a class="page-link" @click="changePage(currentPage + 1)" href="#">Siguiente</a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="container mt-5">
+                    <div class="d-flex justify-content-center my-4">
+                        <nav v-if="filteredCharacters.length > 0" aria-label="Page navigation">
+                            <ul class="pagination pagination-dark pagination-sm pagination-md pagination-lg">
+                                <li class="page-item" :class="{ disabled: currentPage === 1 }">
+                                    <a class="page-link" @click="changePage(currentPage - 1)" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li v-for="page in pagesToShow" :key="page" class="page-item"
+                                    :class="{ active: currentPage === page }">
+                                    <a class="page-link" @click="changePage(page)" href="#">{{ page }}</a>
+                                </li>
+                                <li class="page-item" :class="{ disabled: currentPage === totalPages }">
+                                    <a class="page-link" @click="changePage(currentPage + 1)" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </div>
 
@@ -163,7 +177,7 @@
                             <li>
                                 <a target="blank" href="https://www.facebook.com/RickandMorty/?locale=es_LA"
                                     class="btn-social">
-                                    <img class="icon_footer" src="./Recursos/facebook.png" alt="facebook">
+                                    <img class="icon_footer" src="./Recursos/facebook2.svg" alt="facebook">
                                 </a>
                             </li>
                             <li>
@@ -172,14 +186,14 @@
                                 </a>
                             </li>
                             <li>
-                                <a target="blank" href="https://www.whatsapp.com/?lang=es_LA" class="btn-social">
-                                    <img class="icon_footer" src="./Recursos/whatsapp.png" alt="whatsapp">
+                                <a target="blank" href="https://x.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="btn-social">
+                                    <img class="icon_footer" src="./Recursos/twitter.png" alt="whatsapp">
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-6 mb-4">
-                        <h3>Company</h3>
+                        <h3>Cartoon Network</h3>
                         <a href="./index.html" class="btn-social">
                             <img class="image" src="./Recursos/logo-letras.png" alt="cohort">
                         </a>

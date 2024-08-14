@@ -9,13 +9,8 @@
     background-color: black;
 }
 
-#page {
+main {
     flex: 1;
-}
-
-.imageH {
-    max-height: 55vh;
-    object-fit: cover;
 }
 
 .icon_footer {
@@ -32,6 +27,7 @@ footer h3 {
     font-size: 0.7rem;
 }
 
+/*Paginacion: estilos de colores*/
 .pagination-dark {
     background-color: #343a40 !important;
     border-color: #454d55 !important;
@@ -59,4 +55,50 @@ footer h3 {
     color: #6c757d !important;
     background-color: #343a40 !important;
     border-color: #454d55 !important;
+}
+
+/*Paginacion: Tamaño pequeño*/
+.pagination-sm {
+    font-size: 0.75rem;
+}
+.pagination-sm .page-link {
+    padding: 0.25rem 0.5rem;
+}
+
+/* Paginacion: Tamaño mediano */
+@media (min-width: 576px) {
+    .pagination-md {
+        font-size: 1rem;
+    }
+    .pagination-md .page-link {
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+/* Paginacion: Tamaño grande */
+@media (min-width: 992px) {
+    .pagination-lg {
+        font-size: 1.25rem;
+    }
+    .pagination-lg .page-link {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/*Tarjetas: estilos de tamaños*/
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.card-img-top {
+    object-fit: cover;
+    min-height: 200px;
+    width: 100%;
+}
+.card-body {
+    flex: 1;
+}
+.card-footer {
+    text-align: center;
 }
