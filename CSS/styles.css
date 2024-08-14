@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('../fonts/webfontkit-20240814-015028/get_schwifty-webfont.woff2') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+     font-family: 'Get Schwifty';
+}
+
+
+
 .image {
     max-width: 10.5rem;
 }
@@ -57,7 +70,7 @@ footer h3 {
 
 /* --------------------------------------------PAGINA INFORMATION HECHA POR SEBAS----------------------------- */
 .cssFont_1 {
-    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-family: 'Get Schwifty','Oswald', sans-serif;
     font-size: 60px;
     letter-spacing: 1px;
     color: #00ff1e;
@@ -87,6 +100,30 @@ footer h3 {
     box-shadow: 0 10px 20px rgb(5, 255, 30);
     /* Añade una sombra al hacer hover */
 }
+
+.rick-morty-text p {
+    font-family: 'Get Schwifty', Arial, sans-serif; /* Fuente personalizada que recuerda la estética de Rick y Morty */
+    color: #00ff1e; /* Verde brillante, similar al color de los portales */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para dar un efecto de profundidad */
+    background: linear-gradient(90deg, #3a3a3a, #1e1e1e); /* Fondo con un degradado oscuro */
+    padding: 10px;
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+.rick-morty-text p:hover {
+    transform: scale(1.05); /* Agranda ligeramente el texto al hacer hover */
+    box-shadow: 0 5px 15px rgba(0, 255, 30, 0.5); /* Sombra verde brillante */
+}
+
+
+
+
+
+
+
+
 
 @media(min-width: 768px) {
     .cssFont_1 {
