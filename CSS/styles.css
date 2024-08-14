@@ -2,6 +2,140 @@
     max-width: 10.5rem;
 }
 
+#container_principal {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: black;
+}
+
+#page {
+    flex: 1;
+}
+
+.imageH {
+    max-height: 55vh;
+    object-fit: cover;
+}
+
+.icon_footer {
+    height: 2rem;
+    width: 2rem;
+}
+
+footer h3 {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.copyright {
+    font-size: 0.7rem;
+}
+
+.pagination-dark {
+    background-color: #343a40 !important;
+    border-color: #454d55 !important;
+}
+
+.pagination-dark .page-link {
+    color: #ffffff !important;
+    background-color: #343a40 !important;
+    border-color: #454d55 !important;
+}
+
+.pagination-dark .page-link:hover {
+    color: #ffffff !important;
+    background-color: #495057 !important;
+    border-color: #343a40 !important;
+}
+
+.pagination-dark .page-item.active .page-link {
+    color: #ffffff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.pagination-dark .page-item.disabled .page-link {
+    color: #6c757d !important;
+    background-color: #343a40 !important;
+    border-color: #454d55 !important;
+}
+
+.image {
+    max-width: 10.5rem;
+}
+
+.carousel-caption h5 {
+    font-size: 2rem;
+}
+
+body {
+    background-color: #3c3c35;
+    min-height: 100vh;
+}
+
+.carousel_size {
+    height: 75vh;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.imageH {
+    height: 33vh;
+    min-width: 20vw;
+    object-fit: cover;
+}
+
+.resize_textarea {
+    resize: none;
+}
+
+td {
+    width: 33.3%;
+}
+
+.icon_footer {
+    height: 2rem;
+    width: 2rem;
+}
+
+footer h3 {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.copyright {
+    font-size: 0.7rem;
+}
+
+
+/* locations*/
+.imageLocation {
+    width: 350px;
+    object-fit: contain;
+}
+
+#containerPLocation {
+    color: white;
+}
+
+
+.portalIf {
+    width: 200px;
+}
+
+.image {
+    max-width: 10.5rem;
+}
+
 .carousel-caption h5 {
     font-size: 2rem;
 }
@@ -51,4 +185,12 @@ footer h3 {
 
 .copyright {
     font-size: 0.7rem;
+}
+
+#episodesContainer .card-img-top {
+    width: 100%;
+    height: 200px;
+    /* Ajusta la altura según sea necesario */
+    object-fit: cover;
+    /* Asegura que la imagen cubra el área sin distorsionarse */
 }

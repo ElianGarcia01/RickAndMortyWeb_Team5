@@ -123,67 +123,59 @@
         <!-- INICIA CONTENEDOR DE DOS SECCIONES (FILTROS Y CONTENIDO)-->
 
         <div class="container mb-5">
-
-            <!-- INICIA SECCION DE FILTROS (CHECKS Y BUSQUEDA POR TEXTO)-->
-
-            <div class="mt-4 mb-5">
-                {{CharactersFilter}}
-                <div class="row g-4">
-                    <!-- SECCION CHECKS -->
-                    <div class="col d-flex overflow-auto checkbox-container">
-                        <div class="form-check form-check-inline">
-                            <input v-model="categoriaSelec" class="form-check-input border-2 border-dark"
-                                type="checkbox" :value="" :id="">
-                            <label class="form-check-label" :for="">{{}}</label>
-                        </div>
-                    </div>
-                    <!-- SECCION SEARCH TEXT -->
+            <div class="mt-4">
+                <!-- SECCIÓN SEARCH TEXT Y SORT SELECT -->
+                <div class="d-flex justify-content-between">
                     <div class="col col-12 col-md-4">
-                        <form class="d-flex" role="search">
-                            <input v-model="textoBuscador" class="form-control me-2 border-2 border-dark " type="search"
+                        <form id="searchForm" class="d-flex" role="search">
+                            <input id="searchInput" class="form-control me-2 border-2 border-dark" type="search"
                                 placeholder="Search for episodes..." aria-label="Search">
                             <button class="btn btn-outline-success border-2" type="submit">Search</button>
                         </form>
                     </div>
+                    <div class="col col-12 col-md-4">
+                        <select id="sortSelect" class="form-select border-2 border-dark">
+                            <option value="asc">Sort by Air Date: Ascending</option>
+                            <option value="desc">Sort by Air Date: Descending</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--  AQUI FINALIZA EL CONTENEDOR DE LAS DOS SECCIONES -->
 
-        <div class="container my-5">
-            <h1 class="text-center mb-4">Episodes 41-51</h1>
-            <div id="episodesContainer" class="row row-cols-1 row-cols-md-3 g-4"></div>
+            <div class="container my-5">
+                <h1 class="text-center mb-4">Rick and Morty Episodes</h1>
+                <div id="episodesContainer" class="row row-cols-1 row-cols-md-3 g-4"></div>
+            </div>
         </div>
 
     </main>
 
     <!-- AQUI COMIENZA EL FOOTER -->
 
-    <footer class="text-center footer-style bg-dark text-light">
+    <footer class="text-center bg-dark text-light">
         <div class="container">
             <div class="row pt-4">
                 <div class="col-12 col-md-6 mb-4">
-                    <h3>MORE FROM RICK AND MORTY</h3>
-                    <ul class="list-unstyled d-flex justify-content-around">
-                        <li>
-                            <a target="blank" href="https://www.facebook.com/RickandMorty/?locale=es_LA"
+                    <h3 class="mb-3">MORE FROM RICK AND MORTY</h3>
+                    <ul class="list-unstyled d-flex justify-content-center">
+                        <li class="mx-2">
+                            <a target="_blank" href="https://www.facebook.com/RickandMorty/?locale=es_LA"
                                 class="btn-social">
                                 <img class="icon_footer" src="./Recursos/facebook.png" alt="facebook">
                             </a>
                         </li>
-                        <li>
-                            <a target="blank" href="https://www.instagram.com/RickandMorty/">
+                        <li class="mx-2">
+                            <a target="_blank" href="https://www.instagram.com/RickandMorty/">
                                 <img class="icon_footer" src="./Recursos/instagram.png" alt="instagram">
                             </a>
                         </li>
-                        <li>
-                            <a target="blank" href="https://www.whatsapp.com/?lang=es_LA" class="btn-social">
+                        <li class="mx-2">
+                            <a target="_blank" href="https://www.whatsapp.com/?lang=es_LA" class="btn-social">
                                 <img class="icon_footer" src="./Recursos/whatsapp.png" alt="whatsapp">
                             </a>
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </footer>
