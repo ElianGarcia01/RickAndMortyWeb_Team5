@@ -38,30 +38,30 @@ consumirApis()
 
 const acordeonContenedor = document.getElementById('accordionFlushExample')
 function pintarContendedorTemporada(data) {
-    console.log(data)
+    
     data.forEach(element => {
         acordeonContenedor.innerHTML += `
                                          <div class="accordion-item">
                                             <h2 class="accordion-header">
                                               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${element.acordeon}" aria-expanded="false" aria-controls="flush-collapse${element.acordeon}">
-                                                TEMPORADA ${element.numero}
+                                               SEASON ${element.numero}
                                               </button>
                                             </h2>
                                             <div id="flush-collapse${element.acordeon}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                                               <div class="accordion-body">
                                                 <div class="row mb-2">
                                                     <div class="col">
-                                                        <p><strong>Cantidad de Episodios emitidos :</strong> ${element.episodios}</p>
+                                                        <p><strong>Number of episodes aired :</strong> ${element.episodios}</p>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-2">
                                                     <div class="col">
-                                                        <p><strong>Primera Emisión de la Temporada:</strong> ${element.primeraEmision}</p>
+                                                        <p><strong>First Broadcast of the Season:</strong> ${element.primeraEmision}</p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col">
-                                                        <p><strong>Última Emisión de la Temporada:</strong> ${element.ultimaEmision}</p>
+                                                        <p><strong>Last Broadcast of the Season:</strong> ${element.ultimaEmision}</p>
                                                     </div>
                                                 </div>        
                                               </div>
@@ -78,18 +78,15 @@ function pintarContendedorTemporada(data) {
 }
 
 
+const contenedorPRemios = document.getElementById('contentPremios')
 
 function pintarContenedorPremios(data) {
+    console.log(data)
 
 
 }
 
 
-
-function pintarContenedorVoces(data) {
-
-
-}
 
 
 
