@@ -584,18 +584,11 @@ footer h3 {
     font-size: 0.7rem;
 }
 
-#episodesContainer .card-img-top {
-    width: 100%;
-    height: 200px;
-    /* Ajusta la altura según sea necesario */
-    object-fit: cover;
-    /* Asegura que la imagen cubra el área sin distorsionarse */
-}
 
-/* Asegura que la imagen cubra el área sin distorsionarse */
-/* Asegura que la imagen cubra el área sin distorsionarse */
+
+/* --------------------------------------------PAGINA INFORMATION HECHA POR SEBAS----------------------------- */
 .cssFont_1 {
-    font-family: 'Get Schwifty', 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 60px;
     letter-spacing: 1px;
     color: #00ff1e;
@@ -627,7 +620,7 @@ footer h3 {
 }
 
 .rick-morty-text p {
-    font-family: 'Get Schwifty', Arial, sans-serif;
+    font-family: 'Oswald', Arial, sans-serif;
     /* Fuente personalizada que recuerda la estética de Rick y Morty */
     color: #00ff1e;
     /* Verde brillante, similar al color de los portales */

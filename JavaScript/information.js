@@ -1,7 +1,5 @@
 async function consumirApis() {
     try {
-
-
         //Aca se consume la api general 
         const apisebas = await fetch("https://api-creada.vercel.app/api/sebastian")
         const data = await apisebas.json()
@@ -40,7 +38,7 @@ consumirApis()
 
 const acordeonContenedor = document.getElementById('accordionFlushExample')
 function pintarContendedorTemporada(data) {
-    console.log(data)
+    
     data.forEach(element => {
         acordeonContenedor.innerHTML += `
                                          <div class="accordion-item">
@@ -53,17 +51,17 @@ function pintarContendedorTemporada(data) {
                                               <div class="accordion-body">
                                                 <div class="row mb-2">
                                                     <div class="col">
-                                                        <p><strong>Cantidad de Episodios emitidos :</strong> ${element.episodios}</p>
+                                                        <p><strong>Number of episodes aired :</strong> ${element.episodios}</p>
                                                     </div>
                                                 </div>
                                                 <div class="row mb-2">
                                                     <div class="col">
-                                                        <p><strong>Primera Emisión de la Temporada:</strong> ${element.primeraEmision}</p>
+                                                        <p><strong>First Broadcast of the Season:</strong> ${element.primeraEmision}</p>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col">
-                                                        <p><strong>Última Emisión de la Temporada:</strong> ${element.ultimaEmision}</p>
+                                                        <p><strong>Last Broadcast of the Season:</strong> ${element.ultimaEmision}</p>
                                                     </div>
                                                 </div>        
                                               </div>
