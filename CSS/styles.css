@@ -52,3 +52,46 @@ footer h3 {
 .copyright {
     font-size: 0.7rem;
 }
+
+
+
+/* --------------------------------------------PAGINA INFORMATION HECHA POR SEBAS----------------------------- */
+.cssFont_1 {
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    letter-spacing: 1px;
+    color: #00ff1e;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.temporada-p {
+    margin: 0;
+    padding: 0;
+}
+
+.temporada-p:hover {
+    color: #00ffea;
+    /* Cambia el color de la fuente al hacer hover */
+    text-shadow: 0 0 20px #00ff80, 0 0 40px #00ffea, 0 0 60px #00ffea;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    /* Escala la imagen un 5% más grande */
+    box-shadow: 0 10px 20px rgb(5, 255, 30);
+    /* Añade una sombra al hacer hover */
+}
+
+@media(min-width: 768px) {
+    .cssFont_1 {
+        font-size: 11vh;
+        transform: rotate(-90deg);
+    }
+}
+
