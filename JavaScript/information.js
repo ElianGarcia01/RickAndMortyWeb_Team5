@@ -83,33 +83,12 @@ function pintarContendedorTemporada(data) {
 const contenedorPRemios = document.getElementById('contentPremios')
 
 function pintarContenedorPremios(data) {
-    
-    data.forEach(element => {
-        contenedorPRemios.innerHTML += `
-          <div class="carousel-item ${element.active}">
-                <div class="card text-bg-dark">
-                    <img src="https://hips.hearstapps.com/hmg-prod/images/rick-1537251449.jpg" 
-                    class="card-img" alt="...">                              
-                     <div class="">
-                        <h5 class="text-center">${element.premiacion}</h5>
-                        <p class="">Category: ${element.categoria} </p>
-                        <p class=""><small>Year:${element.año} </small></p>
-                    </div>
-                 </div>
-        </div>
-        `
-    })
-    console.log("ya debio servir")
+    console.log(data)
 
 
 }
 
 
-
-function pintarContenedorVoces(data) {
-
-
-}
 
 
 
