@@ -43,7 +43,7 @@ function pintarContendedorTemporada(data) {
         acordeonContenedor.innerHTML += `
                                          <div class="accordion-item">
                                             <h2 class="accordion-header">
-                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${element.acordeon}" aria-expanded="false" aria-controls="flush-collapse${element.acordeon}">
+                                              <button class="accordion-button collapsed bg-success-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${element.acordeon}" aria-expanded="false" aria-controls="flush-collapse${element.acordeon}">
                                                SEASON ${element.numero}
                                               </button>
                                             </h2>
