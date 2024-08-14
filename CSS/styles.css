@@ -2,36 +2,15 @@
     max-width: 10.5rem;
 }
 
-.carousel-caption h5 {
-    font-size: 2rem;
-}
-
-body {
-    background-color: #3c3c35;
-}
-
-.container_principal {
+#container_principal {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: black;
 }
 
-main {
+#page {
     flex: 1;
-}
-
-.carousel_size {
-    height: 75vh;
-    object-fit: cover;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .imageH {
@@ -51,4 +30,33 @@ footer h3 {
 
 .copyright {
     font-size: 0.7rem;
+}
+
+.pagination-dark {
+    background-color: #343a40 !important;
+    border-color: #454d55 !important;
+}
+
+.pagination-dark .page-link {
+    color: #ffffff !important;
+    background-color: #343a40 !important;
+    border-color: #454d55 !important;
+}
+
+.pagination-dark .page-link:hover {
+    color: #ffffff !important;
+    background-color: #495057 !important;
+    border-color: #343a40 !important;
+}
+
+.pagination-dark .page-item.active .page-link {
+    color: #ffffff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.pagination-dark .page-item.disabled .page-link {
+    color: #6c757d !important;
+    background-color: #343a40 !important;
+    border-color: #454d55 !important;
 }
