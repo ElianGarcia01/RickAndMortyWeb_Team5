@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Función para crear una card para cada temporada
     function createSeasonCard(season) {
         return `
-            <div class="col">
+            <div class="col mb-4">
                 <div class="card h-100 text-center">
                     <img src="${season.img}" class="card-img-top" alt="${season.title}">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">

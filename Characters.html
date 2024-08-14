@@ -106,26 +106,52 @@
                         </ul>
                     </nav>
                 </div>
+                
+                <div class="container mt-5">
+                    <div class="d-flex justify-content-center gap-3 border-dark row" id="favs" v-if="favoritos.length > 0">
+                        <h2 class="text-light text-center w-100">Favorites</h2>
+                        <div v-for="character in favoritos" :key="character.id" class=" col-sm-6 col-md-3 mb-4">
+                            <div class="card border-dark">
+                                <img :src="character.image" class="card-img-top" :alt="character.name">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">{{ character.name }}</h5>
+                                    <p class="card-text">Specie: {{ character.species }}</p>
+                                    <p class="card-text">Status: {{ character.status }}</p>
+                                    <p class="card-text">Gender: {{ character.gender }}</p>
+                                    <div class="card-footer">
+                                        <a :href="'./Details.html?id=' + character.id" class="btn btn-dark m-2">Details</a>
+                                        <a v-on:Click="quitarFavoritos(character)" class="btn btn-dark m-2">Remove</a>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
 
                 <!-- Mensaje cuando no hay personajes -->
                 <div v-if="filteredCharacters.length === 0"
                     class="alert alert-warning d-flex justify-content-center text-center">
                     No characters were found with filters applied.
                 </div>
+                
 
-                <!-- Tarjetas de personajes -->
-                <div v-if="filteredCharacters.length > 0" class="row">
-                    <div v-for="character in filteredCharacters" :key="character.id" class="col-md-3 col-sm-6 mb-4">
-                        <div class="card border-dark">
-                            <img :src="character.image" class="card-img-top" :alt="character.name">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ character.name }}</h5>
-                                <p class="card-text">Specie: {{ character.species }}</p>
-                                <p class="card-text">Status: {{ character.status }}</p>
-                                <p class="card-text">Gender: {{ character.gender }}</p>
-                                <div class="d-flex justify-content-end">
-                                    <a :href="'./Details.html?id=' + character.id" class="btn btn-dark">Details</a>
-                                
+                
+                <div class="container mt-5">
+                    <div v-if="filteredCharacters.length > 0" class="row">
+                        <div v-for="character in filteredCharacters" :key="character.id" class="col-md-3 mb-4">
+                            <div class="card border-dark">
+                                <img :src="character.image" class="card-img-top" :alt="character.name">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">{{ character.name }}</h5>
+                                    <p class="card-text">Especie: {{ character.species }}</p>
+                                    <p class="card-text">Estado: {{ character.status }}</p>
+                                    <p class="card-text">Género: {{ character.gender }}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a :href="'./Details.html?id=' + character.id" class="btn btn-dark m-2">Details</a>
+                                    <a v-on:Click="agregarFavoritos(character)" class="btn btn-dark m-2">Favorite</a>
                                 </div>
                             </div>
                         </div>

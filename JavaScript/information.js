@@ -46,7 +46,7 @@ function pintarContendedorTemporada(data) {
                                          <div class="accordion-item">
                                             <h2 class="accordion-header">
                                               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${element.acordeon}" aria-expanded="false" aria-controls="flush-collapse${element.acordeon}">
-                                                TEMPORADA ${element.numero}
+                                                Season ${element.numero}
                                               </button>
                                             </h2>
                                             <div id="flush-collapse${element.acordeon}" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
