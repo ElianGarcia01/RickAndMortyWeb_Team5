@@ -19,7 +19,7 @@ const app = createApp({
         .then(data => {
           this.character = data;
         })
-        .catch(error => console.error('Error fetching character details:', error));
+        .catch(error => console.error('Error al llamar los datos:', error));
     },
   },
 }).mount('#detailsApp');
