@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container_principal">
+    <div id="container_principal">
         <header class="sticky-top">
 
             <!-- AQUI COMIENZA LA BARRA DE NAVEGACION DEL HEADER -->
@@ -29,13 +30,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                                <a class="nav-link" aria-current="page" href="./index.html">HOME</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="Characters.html">CHARACTERS</a>
+                                <a class="nav-link" aria-current="page" href="./characters.html">CHARACTERS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./Locations.html">LOCATIONS</a>
+                                <a class="nav-link" aria-current="page" href="#">LOCATIONS</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="">EPISODES</a>
@@ -48,38 +49,40 @@
                 </div>
             </nav>
         </header>
-    
-        <main id="page">
+
+        <main>
             <!-- SECCION DE TARJETA -->
-            <div class="container-fluid my-5">
-                <div class="row row-cols-2  d-flex justify-content-center">
-                    <div class="col">
-                        <div class="card border border-1 border-dark bg-success-subtle">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img :src="detalles.image" class="card-img rounded-start" :alt="detalles.name">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body d-flex flex-column justify-content-center align-items-center h-100">
-                                        <h5 class="card-title mb-4">{{detalles.name}}</h5>
-                                        <p class="card-text">Status: {{detalles.status}}</p>
-                                        <p class="card-text">Species: {{detalles.species}}</p>
-                                        <p class="card-text">Gender: {{detalles.gender}}</p>
-                                        <div class="d-flex justify-content-center">
-                                            <a href="./Locations.html"
-                                                class="btn btn-dark w-100">Location</a>
-                                        </div>
-                                    </div>
+            <div class="d-flex justify-content-center">
+                <div id="detailsApp" class="my-5 card mb-3 w-50 border-dark">
+                    <div v-if="character" class="row g-0">
+                        <div class="col-md-5">
+                            <img :src="character.image" class="card-img-top h-100 w-100" :alt="character.name">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ character.name }}</h5>
+                                <p class="card-text"><strong>Especie:</strong> {{ character.species }}</p>
+                                <p class="card-text"><strong>Estado:</strong> {{ character.status }}</p>
+                                <p class="card-text"><strong>Género:</strong> {{ character.gender }}</p>
+                                <p class="card-text"><strong>Origen:</strong> {{ character.origin.name }}</p>
+                                <p class="card-text"><strong>Ubicación actual:</strong> {{ character.location.name }}
+                                </p>
+                                <div class="d-flex flex-column align-items-center">
+                                    <a href="javascript:window.history.back()" class="btn btn-dark w-50">Back to Characters</a>
+                                    <br>
+                                    <a href="./JavaScript/locations.html" class="btn btn-dark w-50">Go to locations</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div v-else class="alert alert-warning">Loading character details...</div>
                 </div>
             </div>
+
         </main>
-    
+
         <!-- AQUI COMIENZA EL FOOTER -->
-    
+
         <footer class="text-center footer-style bg-dark text-light">
             <div class="container">
                 <div class="row pt-4">
@@ -89,7 +92,7 @@
                             <li>
                                 <a target="blank" href="https://www.facebook.com/RickandMorty/?locale=es_LA"
                                     class="btn-social">
-                                    <img class="icon_footer" src="./Recursos/facebook.png" alt="facebook">
+                                    <img class="icon_footer" src="./Recursos/facebook2.svg" alt="facebook">
                                 </a>
                             </li>
                             <li>
@@ -98,14 +101,16 @@
                                 </a>
                             </li>
                             <li>
-                                <a target="blank" href="https://www.whatsapp.com/?lang=es_LA" class="btn-social">
-                                    <img class="icon_footer" src="./Recursos/whatsapp.png" alt="whatsapp">
+                                <a target="blank"
+                                    href="https://x.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                                    class="btn-social">
+                                    <img class="icon_footer" src="./Recursos/twitter.png" alt="whatsapp">
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-6 mb-4">
-                        <h3>Company</h3>
+                        <h3>Cartoon Network</h3>
                         <a href="./index.html" class="btn-social">
                             <img class="image" src="./Recursos/logo-letras.png" alt="cohort">
                         </a>
@@ -121,7 +126,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="/JavaScript/main.js"></script>
+    <script src="./JavaScript/details.js"></script>
 </body>
 
 </html>

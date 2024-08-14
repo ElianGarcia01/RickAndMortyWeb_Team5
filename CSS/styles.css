@@ -1,18 +1,343 @@
 @font-face {
     font-family: 'Get Schwifty';
-    src: url('../fonts/webfontkit-20240814-015028/get_schwifty-webfont.woff2') format('truetype');
+    src: url('/RickAndMortyWeb_Team5/Fonts/GetSchwifty-Regular.woff2') format('woff2'),
+        url('/RickAndMortyWeb_Team5/Fonts/GetSchwifty-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
-body{
-     font-family: 'Get Schwifty';
+@keyframes spinPortal {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
+/* Estilo base para los elementos de la lista */
+.navbar-nav .nav-item {
+    font-family: Get Schwifty, 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+    background-color: #00ffaa46;
+    border-radius: 100px;
+}
+
+/* Estilo para el hover */
+.navbar-nav .nav-item:hover {
+    transform: scale(1.2);
+    /* Aumenta el tamaño del elemento */
+    z-index: 10;
+    /* Asegura que el elemento se muestre sobre los demás */
+}
+
+/* Estilo para los demás elementos cuando uno está en hover */
+.navbar-nav .nav-item:not(:hover) {
+    transform: scale(0.8);
+    /* Disminuye el tamaño de los elementos no seleccionados */
+    opacity: 0.6;
+    /* Hace los elementos no seleccionados más transparentes */
+}
+
+.nav-item .nav-link.active {
+    position: relative;
+    color: #22db6c;
+    /* Color cian brillante para el texto */
+    font-weight: bold;
+    text-shadow: 0px 0px 5px #244e09;
+    background-color: #0223184f;
+    border-radius: 150px;
+    /* Sombra cian para darle un brillo */
+}
+
+.nav-item .nav-link.active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    animation: spinPortal 5s linear infinite;
+}
+
+/* Asegúrate de que el resto del navbar no se vea afectado */
+.navbar {
+    background-color: transparent
+}
+
+
+/* Asegúrate de que el header no tenga fondo o bordes que bloqueen la vista */
+header.sticky-top {
+    background: none;
+    border: none;
+}
+
+.principal {
+    background-image: url('/RickAndMortyWeb_Team5/Recursos/rick-and-morty-art-4k-wallpaper-uhdpaper.com-214@0@j.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    z-index: 3;
+    /* Asegúrate de que este valor sea mayor que el de los otros elementos */
+}
+
+.image-band {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-band img {
+    display: inline-block;
+    vertical-align: middle;
+    /* Ajusta el tamaño de tus imágenes según sea necesario */
+    width: auto;
+    height: 100px;
+    /* Ejemplo de altura */
+    margin-right: -4px;
+    /* Elimina el espacio entre imágenes inline-block */
+}
+
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.image-band {
+    animation: scrollImages 60s linear infinite;
+    /* Ajusta la duración para controlar la velocidad */
+}
+
+.image-band:hover {
+    animation-play-state: paused;
+    /* Detiene la animación cuando el mouse está encima */
+}
+
+.welcome-section {
+    background: url('./Recursos/welcome-background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 50px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.latest-news {
+    background-color: #333;
+    padding: 40px 0;
+    color: #fff;
+}
+
+.latest-news h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.news-item {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.news-item img {
+    width: 30%;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.news-content h4 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.news-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00b3e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.explore-universe {
+    background-color: #282c34;
+    padding: 50px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.explore-universe h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.explore-universe p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.universe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.planet-card {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.planet-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.planet-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.planet-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.planet-card p {
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
 
 
 .image {
     max-width: 10.5rem;
+}
+
+#container_principal {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: black;
+}
+
+#page {
+    flex: 1;
+}
+
+.imageH {
+    max-height: 55vh;
+    object-fit: cover;
+}
+
+.icon_footer {
+    height: 2rem;
+    width: 2rem;
+}
+
+footer h3 {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.copyright {
+    font-size: 0.7rem;
+}
+
+.pagination-dark {
+    background-color: #343a40 !important;
+    border-color: #454d55 !important;
+}
+
+.pagination-dark .page-link {
+    color: #ffffff !important;
+    background-color: #343a40 !important;
+    border-color: #454d55 !important;
+}
+
+.pagination-dark .page-link:hover {
+    color: #ffffff !important;
+    background-color: #495057 !important;
+    border-color: #343a40 !important;
+}
+
+.pagination-dark .page-item.active .page-link {
+    color: #ffffff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.pagination-dark .page-item.disabled .page-link {
+    color: #6c757d !important;
+    background-color: #343a40 !important;
+    border-color: #454d55 !important;
 }
 
 .carousel-caption h5 {
@@ -21,6 +346,8 @@ body{
 
 body {
     background-color: #3c3c35;
+    margin: 0;
+    padding: 0;
 }
 
 .container_principal {
@@ -45,11 +372,6 @@ main {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-.imageH {
-    max-height: 55vh;
-    object-fit: cover;
 }
 
 .icon_footer {

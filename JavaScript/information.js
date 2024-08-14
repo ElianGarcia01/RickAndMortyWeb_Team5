@@ -1,4 +1,5 @@
 async function consumirApis() {
+<<<<<<< HEAD
     try {
         //Aca se consume la api general 
         const apisebas = await fetch("https://api-creada.vercel.app/api/sebastian")
@@ -128,3 +129,39 @@ function pintarContenedorVoces(data) {
 
    const episodios = temporadas[0].primeraEmision
    console.log(episodios)*/
+=======
+  try{
+     const miapi = await fetch("https://api-creada.vercel.app/api/sebastian")
+     const data = await miapi.json()
+
+     console.log(data)
+
+      const premios = data.premios
+      console.log(premios)
+
+      premios.forEach(element => {
+          console.log(element.año)
+      });
+
+      premios
+
+  const temporadas = data.temporadas
+  console.log(temporadas)
+
+
+  temporadas.forEach(element => {
+      console.log(element.primeraEmision)
+  });
+
+  const episodios = temporadas[0].primeraEmision
+  console.log(episodios)
+
+
+  }catch(error){
+      console.log(error)
+  }
+}
+
+
+consumirApis()
+>>>>>>> 66fe907f8776017e5e0e3f4210870924b46bef5c

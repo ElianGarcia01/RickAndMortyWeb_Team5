@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port1": 5501,
+    "liveServer.settings.port2": 5502
 }
