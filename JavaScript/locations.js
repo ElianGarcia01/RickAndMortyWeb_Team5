@@ -47,7 +47,6 @@ const app = Vue.createApp({
                 });
         },
 
-        
         filtrarPersonajesPorUbicacion() {
             const audio = new Audio('./Recursos/portal-gun-sound-effect.mp3');
             audio.volume = 0.1; // Ajusta el volumen entre 0.0 (silencio) y 1.0 (máximo)
@@ -84,6 +83,11 @@ const app = Vue.createApp({
             let detallesPromesas = residentesUrls.map(url => fetch(url).then(response => response.json()));
             return Promise.all(detallesPromesas);
         },
+        mostrarUbicacionAleatoria() {
+            const ubicacionAleatoria = this.ubicaciones[Math.floor(Math.random() * this.ubicaciones.length)];
+            this.filtroUbicacion = ubicacionAleatoria.id;
+            this.filtrarPersonajesPorUbicacion();
+        }
     },
 
     computed: {
