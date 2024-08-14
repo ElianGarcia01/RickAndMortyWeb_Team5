@@ -9,14 +9,39 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/styles.css">
     <link rel="shortcut icon" href="./Recursos/favicon2.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
     <style>
-        .textoVertical {
+        .cssFont_1 {
+            font-family: 'Oswald', Arial, Helvetica, sans-serif;
+            font-size: 60px;
+            letter-spacing: 1px;
+            color: #00ff1e;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
 
-            transform: rotate(90deg);
+        .temporada-p {
+            margin: 0;
+            padding: 0;
+        }
 
+        .temporada-p:hover{
+             color: #00ffea; /* Cambia el color de la fuente al hacer hover */
+            text-shadow: 0 0 20px #00ff80, 0 0 40px #00ffea, 0 0 60px #00ffea;
+        }
+
+        @media(min-width: 768px) {
+            .cssFont_1 {
+                font-size: 11vh;
+                transform: rotate(-90deg);
+            }
         }
     </style>
+
 </head>
 
 <body>
@@ -58,38 +83,136 @@
         </header>
         <main class="bg-success bg-gradient">
 
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+
+                        <div class="container-md h-50 mt-2 mb-2">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-4">
+                                    <img src="https://i.pinimg.com/originals/5a/f8/0b/5af80b1df4057cc10288c079dc826662.png"
+                                        class="img-fluid" alt="personaje">
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                    <p class="cssFont_1 temporada-p">TEMPORADA</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <p><strong>Número de la temporada:</strong> 1</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <p><strong>Cantidad de Episodios:</strong> 11</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <p><strong>Primera Emisión de la Temporada:</strong> 2 de Diciembre 2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p><strong>Última Emisión de la Temporada:</strong> 2 de Diciembre 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
 
-            <div class="container border border-3 border-dark min-vh-100 mt-2">
-                <div class="row d-flex justify-content-evenly border border-3 border-info">
-                    <div class="col-6 border">
-                        <img src="https://i.pinimg.com/originals/5a/f8/0b/5af80b1df4057cc10288c079dc826662.png"
-                            class="img-fluid" alt="personaje">
                     </div>
-                    <div class="col-2">
-                        <h1 class="textoVertical text-wrap"">TEMPORADAS</h1> 
-                          
+                    <div class="carousel-item">
+
+                        <div class="container-md h-50 mt-2 mb-2">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-4">
+                                    <img src="https://movementstrategy.com/wp-content/themes/bigdrop-theme/mortyawardy/rick_warp.png"
+                                        class="img-fluid" alt="personaje">
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                    <p class="cssFont_1 temporada-p">PREMIOS</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <p><strong>Número de la temporada:</strong> 1</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <p><strong>Cantidad de Episodios:</strong> 11</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <p><strong>Primera Emisión de la Temporada:</strong> 2 de Diciembre 2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p><strong>Última Emisión de la Temporada:</strong> 2 de Diciembre 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
-                    <div class=" col-4 border border-5 border-light">
-                            <div class="row ">
-                                <div class="col">
-                                    <p>aca va un dato</p>
+                    <div class="carousel-item">
+
+                        <div class="container-md h-50 mt-2 mb-2">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-4">
+                                    <img src="https://images.squarespace-cdn.com/content/v1/54fc8146e4b02a22841f4df7/1572526448451-D7IGDPSKXNMEJOEP6LA1/Art+of+Rick+and+Morty+%28A2%29+-+41.png"
+                                        class="img-fluid" alt="personaje">
+                                </div>
+                                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                    <p class="cssFont_1 temporada-p">VOCES</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <p><strong>Número de la temporada:</strong> 1</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <p><strong>Cantidad de Episodios:</strong> 11</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-2">
+                                        <div class="col">
+                                            <p><strong>Primera Emisión de la Temporada:</strong> 2 de Diciembre 2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p><strong>Última Emisión de la Temporada:</strong> 2 de Diciembre 2023</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row ">
-                                <div class="col">
-                                    <p>aca va un dato</p>
-                                </div>
-                            </div>
-                            <div class="row ">
-                                <div class="col">
-                                    <p>aca va un dato</p>
-                                </div>
-                            </div>
+                        </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
+
+
+
         </main>
 
         <!-- AQUI COMIENZA EL FOOTER -->
