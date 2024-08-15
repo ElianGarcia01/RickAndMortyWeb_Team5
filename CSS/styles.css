@@ -385,7 +385,7 @@ header.sticky-top {
 
 .card:hover {
 
-    background-color: rgba(77, 198, 200, 0.644);
+    background-color: rgba(43, 255, 0, 0.945);
     border-style: solid 90px;
 
     transform: scale(1.05);
@@ -424,9 +424,7 @@ header.sticky-top {
     background-color: black;
 }
 
-#pLocation {
-    font-family: 'Times New Roman', Times, serif;
-}
+
 
 #tarjeta {
     display: flex;
@@ -784,4 +782,19 @@ footer h3 {
         font-size: 11vh;
         transform: rotate(-90deg);
     }
+}
+
+#app {
+    position: relative;
+
+    background: url(/Recursos/space.jpg);
+    background-size: cover;
+    /* Sombra interior para dar profundidad */
+    box-shadow: inset 0 0 10px #000000;
+    /* Otros estilos para tu main */
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+    margin: 20px;
+    overflow: hidden;
 }

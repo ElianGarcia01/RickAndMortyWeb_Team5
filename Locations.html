@@ -51,15 +51,16 @@
         <main>
 
 
-    <main id="app" class="">
+    <main id="app" >
 
 
-        <div id="containerPLocation" class="fs-4 p-5 text-center ">
-            <p  id="pLocation">"Look, Morty, I've created something special! It's like a 'Hitchhiker's Guide to the Galaxy' but without all the existential fluff. With this Portal you can explore all those whacky worlds we've visited
-                Choosing manually? Bah! That’s for the Jerrys of this world. With this Portal Adventure, every click is an opportunity for greatness, chaos, and maniacal laughter. So go ahead, adventurer! Click that button and get ready for a journey even 
-                Morty couldn’t imagine!”
+        <div id="containerPLocation" class="p-5 text-center ">
+            <p class="h4 fw-bold">"Look, Morty, I've created something special!</p>    
+            <p class="h4 fw-bold">  With this Portal, every click is an opportunity for greatness, chaos, and maniacal laughter. </p> 
+            <p class="h4 fw-bold">Choosing manually? Bah! That’s for the Jerrys of this world! </p>
+            <p class="h4 fw-bold"> So go ahead, adventurer! Click that button and get ready for a journey you couldn’t imagine!”</p>
 
-<h6>Disclaimer: RickCorp is not responsible for unpredictable consequences, temporal paradoxes, or encounters with alternate versions of yourself. Use the Portal Adventure Selector at your own risk!
+<h6  class="fw-bold p-3">Disclaimer: RickCorp is not responsible for unpredictable consequences, temporal paradoxes, or encounters with alternate versions of yourself. Use the Portal Adventure Randomizer at your own risk!
 
 And remember, science is just an excuse to get drunk! </h6></p>
         </div>
@@ -120,7 +121,7 @@ And remember, science is just an excuse to get drunk! </h6></p>
 
         <div v-if="filtroUbicacion === '' && ubicaciones.length > 0" class="text-center my-4">
 
-            <h4 class="text-center display-6 fw-bold textLocation">Enter the portal...</h4>
+            <h4 class="text-center display-6 fw-bold" >Enter the portal...</h4>
             <div class="d-flex justify-content-center align-items-center">
 
                 <img class="imageLocation" src="https://clipground.com/images/portal-rick-and-morty-png-2.gif"
@@ -130,7 +131,7 @@ And remember, science is just an excuse to get drunk! </h6></p>
         </div>
         </div>
         <div class="position-relative container-fluid justify-content-center col-sm-3 " >
-            <p v-if="filtroUbicacion !== '' && ubicaciones.length > 0" id="pLocation">Remember... Choosing manually is as dull as Jerry at a snail convention!</p>
+            <p class="text-center h4" v-if="filtroUbicacion !== '' && ubicaciones.length > 0" id="pLocation">Remember... Choosing manually is as dull as Jerry at a snail convention!</p>
             <div class="selectLocation">
                 <select id="mySelect" class="form-select form-select-lg mb-3 justify-content-center"
                     v-model="filtroUbicacion" v-on:change="filtrarPersonajesPorUbicacion" v-if="filtroUbicacion !== '' && ubicaciones.length > 0">
