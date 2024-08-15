@@ -560,7 +560,6 @@ body {
 
 }
 
-
 main {
     position: relative;
 
@@ -722,66 +721,3 @@ footer h3 {
 }
 
 /* --------------------------------------------PAGINA INFORMATION HECHA POR SEBAS----------------------------- */
-.cssFont_1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 60px;
-    letter-spacing: 1px;
-    color: #00ff1e;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.temporada-p {
-    margin: 0;
-    padding: 0;
-}
-
-.temporada-p:hover {
-    color: #00ffea;
-    /* Cambia el color de la fuente al hacer hover */
-    text-shadow: 0 0 20px #00ff80, 0 0 40px #00ffea, 0 0 60px #00ffea;
-}
-
-.img-fluid {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.img-fluid:hover {
-    transform: scale(1.05);
-    /* Escala la imagen un 5% más grande */
-    box-shadow: 0 10px 20px rgb(5, 255, 30);
-    /* Añade una sombra al hacer hover */
-}
-
-.rick-morty-text p {
-    font-family: 'Oswald', Arial, sans-serif;
-    /* Fuente personalizada que recuerda la estética de Rick y Morty */
-    color: #00ff1e;
-    /* Verde brillante, similar al color de los portales */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    /* Sombra para dar un efecto de profundidad */
-    background: linear-gradient(90deg, #3a3a3a, #1e1e1e);
-    /* Fondo con un degradado oscuro */
-    padding: 10px;
-    border-radius: 8px;
-    /* Bordes redondeados */
-    margin-bottom: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Animación suave */
-}
-
-.rick-morty-text p:hover {
-    transform: scale(1.05);
-    /* Agranda ligeramente el texto al hacer hover */
-    box-shadow: 0 5px 15px rgba(0, 255, 30, 0.5);
-    /* Sombra verde brillante */
-}
-
-
-@media(min-width: 768px) {
-    .cssFont_1 {
-        font-size: 11vh;
-        transform: rotate(-90deg);
-    }
-}
