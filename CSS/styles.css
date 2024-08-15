@@ -792,9 +792,11 @@ footer h3 {
     /* Sombra interior para dar profundidad */
     box-shadow: inset 0 0 10px #000000;
     /* Otros estilos para tu main */
-    padding: 20px;
+    padding: 230px;
     color: white;
     border-radius: 15px;
     margin: 20px;
     overflow: hidden;
+    height: auto;
+    width: auto;
 }
