@@ -26,6 +26,10 @@ footer h3 {
 .copyright {
     font-size: 0.7rem;
 }
+.custom-placeholder::placeholder {
+    color: #b0b0b0; /* Un color gris claro para buen contraste */
+    opacity: 1; /* Asegura que el color del placeholder no sea semitransparente */
+}
 
 /*Paginacion: estilos de colores*/
 .pagination-dark {
