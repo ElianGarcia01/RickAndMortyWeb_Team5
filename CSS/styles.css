@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: black;
+    background-image: url(/Recursos/background5.avif);
 }
 
 .image {
@@ -179,5 +179,74 @@ footer h3 {
     .col-md-6 {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+}
+
+/* Tarjeta de detalles */
+.rick-morty-card {
+    border: 2px solid #8A2BE2; /* Morado */
+    border-radius: 12px;
+    background-color: #1d1d1d; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+.rick-morty-card img {
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.rick-morty-card .card-body {
+    background-color: #202329; /* Fondo de la tarjeta */
+}
+
+.rick-morty-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8A2BE2; /* Morado para el título */
+}
+
+.rick-morty-card .card-text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.rick-morty-card .btn-primary {
+    background-color: #8A2BE2; /* Morado */
+    border-color: #8A2BE2;
+    color: #ffffff;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.rick-morty-card .btn-primary:hover {
+    background-color: #7b1fa2; /* Morado oscuro */
+    border-color: #7b1fa2;
+}
+
+.rick-morty-card .btn-secondary {
+    background-color: #4CAF50; /* Verde para el botón secundario */
+    border-color: #4CAF50;
+    color: #ffffff;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.rick-morty-card .btn-secondary:hover {
+    background-color: #388e3c; /* Verde más oscuro */
+    border-color: #388e3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .rick-morty-card {
+        width: 90%;
+    }
+
+    .rick-morty-card .card-body {
+        padding: 1rem;
     }
 }

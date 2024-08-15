@@ -52,24 +52,25 @@
         <main>
             <!-- SECCION DE TARJETA -->
             <div class="d-flex justify-content-center">
-                <div id="detailsApp" class="my-5 card mb-3 w-50 border-dark">
+                <div id="detailsApp" class="my-5 card mb-3 w-75 border-dark rick-morty-card">
                     <div v-if="character" class="row g-0">
-                        <div class="col-md-5">
-                            <img :src="character.image" class="card-img-top h-100 w-100" :alt="character.name">
+                        <div class="col-md-4">
+                            <img :src="character.image" class="card-img-top" :alt="character.name">
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-8">
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ character.name }}</h5>
-                                <p class="card-text"><strong>Especie:</strong> {{ character.species }}</p>
-                                <p class="card-text"><strong>Estado:</strong> {{ character.status }}</p>
-                                <p class="card-text"><strong>Género:</strong> {{ character.gender }}</p>
-                                <p class="card-text"><strong>Origen:</strong> {{ character.origin.name }}</p>
-                                <p class="card-text"><strong>Ubicación actual:</strong> {{ character.location.name }}
+                                <p class="card-text"><strong>Species:</strong> {{ character.species }}</p>
+                                <p class="card-text"><strong>Status:</strong> {{ character.status }}</p>
+                                <p class="card-text"><strong>Gender:</strong> {{ character.gender }}</p>
+                                <p class="card-text"><strong>Origin:</strong> {{ character.origin.name }}</p>
+                                <p class="card-text"><strong>Current Location:</strong> {{ character.location.name }}
                                 </p>
                                 <div class="d-flex flex-column align-items-center">
-                                    <a href="javascript:window.history.back()" class="btn btn-dark w-50">Back to Characters</a>
-                                    <br>
-                                    <a href="./JavaScript/locations.html" class="btn btn-dark w-50">Go to locations</a>
+                                    <a href="javascript:window.history.back()" class="btn btn-primary w-50">Back to
+                                        Characters</a>
+                                    <a href="./JavaScript/locations.html" class="btn btn-secondary w-50 mt-2">Go to
+                                        Locations</a>
                                 </div>
                             </div>
                         </div>
@@ -78,46 +79,48 @@
                 </div>
             </div>
 
-        </main>
+    </div>
 
-        <!-- AQUI COMIENZA EL FOOTER -->
+    </main>
 
-        <footer class="text-center footer-style bg-dark text-light">
-            <div class="container">
-                <div class="row pt-4">
-                    <div class="col-12 col-md-6 mb-4">
-                        <h3>MORE FROM RICK AND MORTY</h3>
-                        <ul class="list-unstyled d-flex justify-content-around">
-                            <li>
-                                <a target="blank" href="https://www.facebook.com/RickandMorty/?locale=es_LA"
-                                    class="btn-social">
-                                    <img class="icon_footer" src="./Recursos/facebook2.svg" alt="facebook">
-                                </a>
-                            </li>
-                            <li>
-                                <a target="blank" href="https://www.instagram.com/RickandMorty/" class="btn-social">
-                                    <img class="icon_footer" src="./Recursos/instagram.png" alt="instagram">
-                                </a>
-                            </li>
-                            <li>
-                                <a target="blank"
-                                    href="https://x.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                                    class="btn-social">
-                                    <img class="icon_footer" src="./Recursos/twitter.png" alt="whatsapp">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <h3>Cartoon Network</h3>
-                        <a href="./index.html" class="btn-social">
-                            <img class="image" src="./Recursos/logo-letras.png" alt="cohort">
-                        </a>
-                        <p class="mt-2 copyright">&copy; 2024 Rick and Morty.</p>
-                    </div>
+    <!-- AQUI COMIENZA EL FOOTER -->
+
+    <footer class="text-center footer-style bg-dark text-light">
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-12 col-md-6 mb-4">
+                    <h3>MORE FROM RICK AND MORTY</h3>
+                    <ul class="list-unstyled d-flex justify-content-around">
+                        <li>
+                            <a target="blank" href="https://www.facebook.com/RickandMorty/?locale=es_LA"
+                                class="btn-social">
+                                <img class="icon_footer" src="./Recursos/facebook2.svg" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="blank" href="https://www.instagram.com/RickandMorty/" class="btn-social">
+                                <img class="icon_footer" src="./Recursos/instagram.png" alt="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="blank"
+                                href="https://x.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                                class="btn-social">
+                                <img class="icon_footer" src="./Recursos/twitter.png" alt="whatsapp">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Cartoon Network</h3>
+                    <a href="./index.html" class="btn-social">
+                        <img class="image" src="./Recursos/logo-letras.png" alt="cohort">
+                    </a>
+                    <p class="mt-2 copyright">&copy; 2024 Rick and Morty.</p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     </div>
 
     <!-- FINALIZA EL FOOTER -->
