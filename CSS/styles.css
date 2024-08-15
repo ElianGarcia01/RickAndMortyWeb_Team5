@@ -1,10 +1,33 @@
 /* General */
+/* General */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 #container_principal {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-image: url(/Recursos/background5.avif);
 }
+
+main {
+    flex: 1;
+}
+
+.footer-style {
+    margin-top: auto; /* Mueve el footer a la parte inferior */
+}
+
+/* Estilos adicionales */
+.d-flex.align-items-center.min-vh-100 {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .image {
     max-width: 10.5rem;
@@ -182,7 +205,7 @@ footer h3 {
     }
 }
 
-/* Tarjeta de detalles */
+/* Estilos para la pagina de detalles */
 .rick-morty-card {
     border: 2px solid #8A2BE2; /* Morado */
     border-radius: 12px;
@@ -238,6 +261,40 @@ footer h3 {
 .rick-morty-card .btn-secondary:hover {
     background-color: #388e3c; /* Verde más oscuro */
     border-color: #388e3c;
+}
+
+/* Estilos para el mensaje de carga en pagina de detalles*/
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px; /* Ajustar según sea necesario */
+    background-color: #1d1d1d; /* Fondo oscuro */
+    border-radius: 12px;
+}
+
+.loading-spinner {
+    border: 8px solid #1d1d1d; /* Fondo del spinner */
+    border-top: 8px solid #8A2BE2; /* Color del spinner */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+.loading-text {
+    font-size: 1.2rem;
+    color: #8A2BE2; /* Morado */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Animación del spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Responsive */
