@@ -84,14 +84,6 @@
                     </div>
                 </div>
 
-                <!-- Mensaje cuando no hay personajes -->
-                <div v-if="filteredCharacters.length === 0"
-                    class="text-center text-light d-flex flex-column justify-content-center align-items-center my-4">
-                    <h4>No characters found for these filters. Try again with different filters.
-                    </h4>
-                    <img class="rounded busqueda" src="./Recursos/rick and morty ebrios.png" alt="No characters found">
-                </div>
-
                 <!-- Paginación -->
                 <div v-if="filteredCharacters.length > 0" class="pagination-container">
                     <nav aria-label="Page navigation">
@@ -115,6 +107,16 @@
                     </nav>
                 </div>
 
+                <!-- Mensaje cuando no hay personajes -->
+                <div v-if="filteredCharacters.length === 0"
+                    class="text-center text-light d-flex flex-column justify-content-center align-items-center my-4">
+                    <h4>No characters found for these filters. Try again with different filters.
+                    </h4>
+                    <img class="rounded busqueda" src="./Recursos/rick and morty ebrios.png" alt="No characters found">
+                </div>
+
+                
+
                 <!-- Tarjetas de personajes -->
                 <div v-if="filteredCharacters.length > 0" class="row">
                     <div v-for="character in filteredCharacters" :key="character.id"
@@ -128,7 +130,7 @@
                                 <p class="card-text">Gender: <span>{{ character.gender }}</span></p>
                             </div>
                             <div class="card-footer text-center">
-                                <a :href="'details.html?id=' + character.id" class="btn btn-dark">Details</a>
+                                <a :href="'detailsCharac.html?id=' + character.id" class="btn btn-dark">Details</a>
                             </div>
                         </div>
                     </div>
