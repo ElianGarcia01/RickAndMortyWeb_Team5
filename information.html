@@ -69,6 +69,12 @@
                                 <div class="col-md-4 rick-morty-text">
 
                                     <div class="accordion rick-morty-text" id="accordionFlushExample">
+                                        
+
+
+
+
+
 
                                     </div>
 
@@ -162,6 +168,81 @@
                             </div>
                         </div>
                     </div>
+
+
+
+                    <!-- Estadísticas de Rick and Morty -->
+<div class="carousel-item">
+    <div class="container-md h-50 mt-2 mb-2">
+        <div class="row g-4 align-items-center">
+            <!-- Imagen del personaje -->
+            <div class="col-md-4">
+                <img src="https://images.squarespace-cdn.com/content/v1/54fc8146e4b02a22841f4df7/1572526448451-D7IGDPSKXNMEJOEP6LA1/Art+of+Rick+and+Morty+%28A2%29+-+41.png"
+                    class="img-fluid" alt="personaje">
+            </div>
+
+            <!-- Título de estadísticas -->
+            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                <p class="cssFont_1 temporada-p">STATISTICS</p>
+            </div>
+
+            <!-- Contenido de estadísticas -->
+            <div class="col-md-4 rick-morty-text">
+                <div class="row mb-4">
+                    <div class="col text-center">
+                        <h4><strong>Characters</strong></h4>
+                        <p class="statistic-number" data-target="826">0</p>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col text-center">
+                        <h4><strong>Episodes</strong></h4>
+                        <p class="statistic-number" data-target="51">0</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <h4><strong>Locations</strong></h4>
+                        <p class="statistic-number" data-target="126">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script para animar los números -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const counters = document.querySelectorAll('.statistic-number');
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                const speed = 200;
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            updateCount();
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
                 </div>
                 <button class="carousel-control-prev " type="button" data-bs-target="#carruselPrincipal" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

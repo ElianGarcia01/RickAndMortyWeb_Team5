@@ -24,7 +24,15 @@ async function consumirApis() {
         const datosVoces = data.personajesDoblados
         pintarContenedorVoces(datosVoces)
 
-        //
+        //CONSUMIR API RICK ORIGINAL
+
+        const apiRick = await fetch("https://rickandmortyapi.com/api/character/")
+        const dataRick = await apiRick.json()
+        console.log(dataRick)
+
+
+
+
 
     } catch (error) {
         console.log(error)
@@ -33,6 +41,16 @@ async function consumirApis() {
 
 
 consumirApis()
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -76,6 +94,9 @@ function pintarContendedorTemporada(data) {
 
 
 }
+
+
+
 
 
 
