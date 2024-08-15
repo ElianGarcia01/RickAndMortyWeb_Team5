@@ -107,6 +107,38 @@
                     </nav>
                 </div>
 
+                <div>
+                    <p>Favorites</p>
+                    <button id="abrirModal" >Open Favorites</button>
+                </div>
+    
+                <dialog id="modal" >
+                    <div class="container mt-5">
+                        <div class="d-flex justify-content-center gap-3 border-dark row" id="favs">
+                            <h2 class="text-light text-center w-100">Favorites</h2>
+                            <p v-if="favoritos.length === 0">No favorites to show</p>
+                            <div v-for="character in favoritos" :key="character.id" class=" col-sm-6 col-md-3 mb-4">
+                                <div class="card border-dark">
+                                    <img :src="character.image" class="card-img-top" :alt="character.name">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">{{ character.name }}</h5>
+                                        <p class="card-text">Specie: {{ character.species }}</p>
+                                        <p class="card-text">Status: {{ character.status }}</p>
+                                        <p class="card-text">Gender: {{ character.gender }}</p>
+                                        <div class="card-footer">
+                                            <a :href="'./Details.html?id=' + character.id" class="btn btn-dark m-2">Details</a>
+                                            <a v-on:Click="quitarFavoritos(character)" class="btn btn-dark m-2">Remove</a>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <button id="cerrarModal">Close favorites</button>
+                    </div>
+                </dialog>
+
                 <!-- Mensaje cuando no hay personajes -->
                 <div v-if="filteredCharacters.length === 0"
                     class="text-center text-light d-flex flex-column justify-content-center align-items-center my-4">
@@ -129,6 +161,7 @@
                             </div>
                             <div class="card-footer text-center">
                                 <a :href="'detailsCharac.html?id=' + character.id" class="btn btn-dark">Details</a>
+                                <a v-on:Click="agregarFavoritos(character)" class="btn btn-dark m-2">Favorite</a>
                             </div>
                         </div>
                     </div>
