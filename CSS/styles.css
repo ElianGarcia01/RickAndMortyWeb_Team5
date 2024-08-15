@@ -17,15 +17,67 @@
     }
 }
 
+#hola {
+    background-image: url(../Recursos/fondo.png);
+}
+
+#cont {
+    background-image: url(../Recursos/fondo.png);
+}
+
+.toc {
+
+    background-image: url(../Recursos/image.webp);
+
+}
+
 /* Estilo base para los elementos de la lista */
 .navbar-nav .nav-item {
     font-family: Get Schwifty, 'Oswald', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     transition: transform 0.5s ease;
-    background-color: #00ffaa46;
+    background: linear-gradient(135deg, #290c12, #302b63, #24243e);
     border-radius: 100px;
+    text-align: center;
 }
+
+.ff {
+    color: #46c6c2;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    padding: 0px 6px;
+
+}
+
+.imageLocation {
+    width: 350px;
+    object-fit: contain;
+}
+
+#containerPLocation {
+    color: white;
+}
+
+
+.portalIf {
+    width: 200px;
+}
+
+@media (max-width: 768px) {
+
+    /* Ajusta este valor según el punto de ruptura que desees para 'pantallas pequeñas' */
+    #pLocation {
+        max-height: 200px;
+        /* Ajusta este valor según la altura deseada */
+        overflow-y: auto;
+        /* Habilita el desplazamiento vertical si el contenido es más alto que max-height */
+    }
+}
+
 
 /* Estilo para el hover */
 .navbar-nav .nav-item:hover {
@@ -39,17 +91,16 @@
 .navbar-nav .nav-item:not(:hover) {
     transform: scale(0.8);
     /* Disminuye el tamaño de los elementos no seleccionados */
-    opacity: 0.6;
-    /* Hace los elementos no seleccionados más transparentes */
+
 }
 
 .nav-item .nav-link.active {
     position: relative;
-    color: #22db6c;
+    color: #00fc65;
     /* Color cian brillante para el texto */
     font-weight: bold;
-    text-shadow: 0px 0px 5px #244e09;
-    background-color: #0223184f;
+    text-shadow: 0px 0px 5px #000000;
+    background-color: #0000004f;
     border-radius: 150px;
     /* Sombra cian para darle un brillo */
 }
@@ -231,7 +282,6 @@ header.sticky-top {
 }
 
 .latest-news {
-    background-color: #333;
     padding: 40px 0;
     color: #fff;
 }
@@ -289,7 +339,7 @@ header.sticky-top {
 }
 
 .explore-universe {
-    background-color: #282c34;
+
     padding: 50px 0;
     color: #ffffff;
     text-align: center;
@@ -504,7 +554,7 @@ footer {
 }
 
 body {
-    background: linear-gradient(to bottom, #a8a8a8 0%, #000000 100%);
+    background: linear-gradient(to bottom, #000000c9 0%, #000000 100%);
     margin: 0;
     padding: 0;
 
