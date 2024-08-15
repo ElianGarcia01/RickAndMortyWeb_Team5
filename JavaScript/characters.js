@@ -78,8 +78,18 @@ const app = createApp({
         pages.push(i)
       }
       return pages
+    },
+    isFavorite() {
+      return (character) => this.favoritos.some(fav => fav.id === character.id);
+    }
+  },
+  agregarFavoritos(personaje) {
+    if (!this.isFavorite(personaje)) {
+      this.favoritos.push(personaje);
+      localStorage.setItem('favoritos', JSON.stringify(this.favoritos));
     }
   }
+  
 }).mount('#page')
 
 let lastScrollTop = 0; // Variable para guardar la última posición de scroll

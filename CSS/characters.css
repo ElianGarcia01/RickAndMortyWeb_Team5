@@ -1,5 +1,6 @@
 /* General */
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
 }
@@ -8,7 +9,7 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url(/Recursos/background5.avif);
+    background-image: url(../Recursos/background5.avif);
 }
 
 main {
@@ -16,7 +17,8 @@ main {
 }
 
 .footer-style {
-    margin-top: auto; /* Mueve el footer a la parte inferior */
+    margin-top: auto;
+    /* Mueve el footer a la parte inferior */
 }
 
 /* Estilos adicionales */
@@ -71,6 +73,7 @@ footer h3 {
 
 .page-item {
     margin: 0;
+    background-color: none;
     /* Elimina el margen para un ajuste más preciso */
 }
 
@@ -187,15 +190,22 @@ footer h3 {
 .bg-black {
     background-color: #000000;
 }
+
 .border-info {
-    border-color: #00bfff; /* Azul brillante para destacar */
+    border-color: #00bfff;
+    /* Azul brillante para destacar */
 }
+
 .text-light {
-    color: #e0e0e0; /* Color claro para contraste con el fondo oscuro */
+    color: #e0e0e0;
+    /* Color claro para contraste con el fondo oscuro */
 }
+
 .custom-placeholder::placeholder {
-    color: #a0a0a0; /* Color del placeholder */
+    color: #a0a0a0;
+    /* Color del placeholder */
 }
+
 @media (max-width: 768px) {
     .col-md-6 {
         flex: 0 0 100%;
@@ -205,11 +215,15 @@ footer h3 {
 
 /* Estilos para la pagina de detalles */
 .rick-morty-card {
-    border: 2px solid #8A2BE2; /* Morado */
+    border: 2px solid #8A2BE2;
+    /* Morado */
     border-radius: 12px;
-    background-color: #1d1d1d; /* Fondo oscuro */
-    color: #e0e0e0; /* Texto claro */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    background-color: #1d1d1d;
+    /* Fondo oscuro */
+    color: #e0e0e0;
+    /* Texto claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    /* Sombra sutil */
 }
 
 .rick-morty-card img {
@@ -219,13 +233,15 @@ footer h3 {
 }
 
 .rick-morty-card .card-body {
-    background-color: #202329; /* Fondo de la tarjeta */
+    background-color: #202329;
+    /* Fondo de la tarjeta */
 }
 
 .rick-morty-card .card-title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #8A2BE2; /* Morado para el título */
+    color: #8A2BE2;
+    /* Morado para el título */
 }
 
 .rick-morty-card .card-text {
@@ -234,7 +250,8 @@ footer h3 {
 }
 
 .rick-morty-card .btn-primary {
-    background-color: #8A2BE2; /* Morado */
+    background-color: #8A2BE2;
+    /* Morado */
     border-color: #8A2BE2;
     color: #ffffff;
     font-size: 0.9rem;
@@ -243,12 +260,14 @@ footer h3 {
 }
 
 .rick-morty-card .btn-primary:hover {
-    background-color: #7b1fa2; /* Morado oscuro */
+    background-color: #7b1fa2;
+    /* Morado oscuro */
     border-color: #7b1fa2;
 }
 
 .rick-morty-card .btn-secondary {
-    background-color: #4CAF50; /* Verde para el botón secundario */
+    background-color: #4CAF50;
+    /* Verde para el botón secundario */
     border-color: #4CAF50;
     color: #ffffff;
     font-size: 0.9rem;
@@ -257,7 +276,8 @@ footer h3 {
 }
 
 .rick-morty-card .btn-secondary:hover {
-    background-color: #388e3c; /* Verde más oscuro */
+    background-color: #388e3c;
+    /* Verde más oscuro */
     border-color: #388e3c;
 }
 
@@ -267,14 +287,18 @@ footer h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 200px; /* Ajustar según sea necesario */
-    background-color: #1d1d1d; /* Fondo oscuro */
+    height: 200px;
+    /* Ajustar según sea necesario */
+    background-color: #1d1d1d;
+    /* Fondo oscuro */
     border-radius: 12px;
 }
 
 .loading-spinner {
-    border: 8px solid #1d1d1d; /* Fondo del spinner */
-    border-top: 8px solid #8A2BE2; /* Color del spinner */
+    border: 8px solid #1d1d1d;
+    /* Fondo del spinner */
+    border-top: 8px solid #8A2BE2;
+    /* Color del spinner */
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -284,15 +308,21 @@ footer h3 {
 
 .loading-text {
     font-size: 1.2rem;
-    color: #8A2BE2; /* Morado */
+    color: #8A2BE2;
+    /* Morado */
     text-align: center;
     font-weight: bold;
 }
 
 /* Animación del spinner */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Responsive */
@@ -305,3 +335,5 @@ footer h3 {
         padding: 1rem;
     }
 }
+
+/*Seccion modal*/
