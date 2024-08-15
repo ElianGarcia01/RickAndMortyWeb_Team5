@@ -1,5 +1,4 @@
 /* General */
-/* General */
 html, body {
     height: 100%;
     margin: 0;
@@ -27,7 +26,6 @@ main {
     align-items: center;
     justify-content: center;
 }
-
 
 .image {
     max-width: 10.5rem;
