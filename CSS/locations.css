@@ -1,0 +1,43 @@
+#app {
+    position: relative;
+
+    background: url(../Recursos/space.jpg);
+    background-size: cover;
+    /* Sombra interior para dar profundidad */
+    box-shadow: inset 0 0 10px #000000;
+    /* Otros estilos para tu main */
+    padding: 230px;
+    color: white;
+    border-radius: 15px;
+    margin: 20px;
+    overflow: hidden;
+    height: auto;
+    width: auto;
+}
+
+.imageLocation {
+    width: 500px;
+    object-fit: contain;
+
+}
+
+#containerPLocation {
+    color: white;
+}
+
+
+.portalIf {
+    width: 200px;
+
+}
+
+@media (max-width: 768px) {
+
+    /* Ajusta este valor según el punto de ruptura que desees para 'pantallas pequeñas' */
+    #pLocation {
+        max-height: 200px;
+        /* Ajusta este valor según la altura deseada */
+        overflow-y: auto;
+        /* Habilita el desplazamiento vertical si el contenido es más alto que max-height */
+    }
+}
