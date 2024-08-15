@@ -42,48 +42,51 @@
         <main id="page">
             <div class="container mt-4">
                 <!-- Filtros -->
-                <div class="row mb-5 g-3">
-                    <div class="col-md-3">
-                        <h3 class="text-center text-light mb-2">Names</h3>
-                        <input v-model="filters.name"
-                            class="form-control form-control-lg shadow-sm rounded-pill bg-dark text-light custom-placeholder"
-                            placeholder="Search by name">
-                    </div>
-                    <div class="col-md-3">
-                        <h3 class="text-center text-light mb-2">Gender</h3>
-                        <select v-model="filters.gender"
-                            class="form-select form-select-lg shadow-sm rounded-pill bg-dark text-light">
-                            <option value="">All genders</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Genderless">Genderless</option>
-                            <option value="unknown">Unknown</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3">
-                        <h3 class="text-center text-light mb-2">Status</h3>
-                        <select v-model="filters.status"
-                            class="form-select form-select-lg shadow-sm rounded-pill bg-dark text-light">
-                            <option value="">All statuses</option>
-                            <option value="Alive">Alive</option>
-                            <option value="Dead">Dead</option>
-                            <option value="unknown">Unknown</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3">
-                        <h3 class="text-center text-light mb-2">Species</h3>
-                        <select v-model="filters.species"
-                            class="form-select form-select-lg shadow-sm rounded-pill bg-dark text-light">
-                            <option value="">All species</option>
-                            <option value="Human">Human</option>
-                            <option value="Alien">Alien</option>
-                            <option value="unknown">Unknown</option>
-                        </select>
+                <div class="container-fluid">
+                    <div class="row mb-5 g-3">
+                        <div class="col-md-6 col-lg-3">
+                            <h3 class="text-center text-light mb-2">Name</h3>
+                            <input v-model="filters.name"
+                                class="form-control form-control-lg shadow-sm rounded-pill bg-black text-light custom-placeholder border border-info"
+                                placeholder="Search by name">
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h3 class="text-center text-light mb-2">Gender</h3>
+                            <select v-model="filters.gender"
+                                class="form-select form-select-lg shadow-sm rounded-pill bg-black text-light border border-info">
+                                <option value="">All genders</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Genderless">Genderless</option>
+                                <option value="unknown">Unknown</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h3 class="text-center text-light mb-2">Status</h3>
+                            <select v-model="filters.status"
+                                class="form-select form-select-lg shadow-sm rounded-pill bg-black text-light border border-info">
+                                <option value="">All statuses</option>
+                                <option value="Alive">Alive</option>
+                                <option value="Dead">Dead</option>
+                                <option value="unknown">Unknown</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <h3 class="text-center text-light mb-2">Species</h3>
+                            <select v-model="filters.species"
+                                class="form-select form-select-lg shadow-sm rounded-pill bg-black text-light border border-info">
+                                <option value="">All species</option>
+                                <option value="Human">Human</option>
+                                <option value="Alien">Alien</option>
+                                <option value="unknown">Unknown</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Mensaje cuando no hay personajes -->
-                <div v-if="filteredCharacters.length === 0" class="text-center text-light d-flex flex-column justify-content-center align-items-center my-4">
+                <div v-if="filteredCharacters.length === 0"
+                    class="text-center text-light d-flex flex-column justify-content-center align-items-center my-4">
                     <h4>No characters found for these filters. Try again with different filters.
                     </h4>
                     <img class="rounded busqueda" src="./Recursos/rick and morty ebrios.png" alt="No characters found">

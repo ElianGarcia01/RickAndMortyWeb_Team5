@@ -161,3 +161,23 @@ footer h3 {
         padding: 0.5rem;
     }
 }
+
+/* Estilos personalizados en seccion de filtros */
+.bg-black {
+    background-color: #000000;
+}
+.border-info {
+    border-color: #00bfff; /* Azul brillante para destacar */
+}
+.text-light {
+    color: #e0e0e0; /* Color claro para contraste con el fondo oscuro */
+}
+.custom-placeholder::placeholder {
+    color: #a0a0a0; /* Color del placeholder */
+}
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
