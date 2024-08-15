@@ -42,8 +42,8 @@ function pintarContendedorTemporada(data) {
     data.forEach(element => {
         acordeonContenedor.innerHTML += `
                                          <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${element.acordeon}" aria-expanded="false" aria-controls="flush-collapse${element.acordeon}">
+                                            <h2 class="accordion-header rick-morty-text">
+                                              <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse${element.acordeon}" aria-expanded="false" aria-controls="flush-collapse${element.acordeon}">
                                                 Season ${element.numero}
                                               </button>
                                             </h2>
@@ -90,6 +90,10 @@ function pintarContenedorVoces(data) {
 
 
 }
+
+
+
+
 
 let lastScrollTop = 0; // Variable para guardar la última posición de scroll
 const navbar = document.querySelector('.navbar');

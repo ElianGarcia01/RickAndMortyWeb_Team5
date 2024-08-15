@@ -10,6 +10,14 @@ body{
      font-family: 'Get Schwifty';
 }
 
+body {
+    background-color: #3c3c35;
+}
+
+
+main {
+    flex: 1;
+}
 
 
 .image {
@@ -20,18 +28,12 @@ body{
     font-size: 2rem;
 }
 
-body {
-    background-color: #3c3c35;
-}
+
 
 .container_principal {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-main {
-    flex: 1;
 }
 
 .carousel_size {
