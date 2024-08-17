@@ -265,15 +265,14 @@ footer h3 {
 .rick-morty-card .card-title {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #8A2BE2;
+    color: #3de22b;
     /* Morado para el título */
 }
 
 .rick-morty-card .card-title:hover {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #3de22b;
-    /* Morado para el título */
+    color: #8A2BE2;
 }
 
 .rick-morty-card .card-text {

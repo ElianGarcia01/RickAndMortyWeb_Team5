@@ -86,8 +86,13 @@
                 </div>
 
                 <!-- Paginación -->
-                <div v-if="filteredCharacters.length > 0" class="pagination-container">
-                    <nav aria-label="Page navigation">
+                <div class="pagination-container d-flex justify-content-start">
+                    <div class="me-5">
+                        <button id="abrirModal" class="mb-4">
+                            <h5>Open Favorites</h5>
+                        </button>
+                    </div>
+                    <nav aria-label="Page navigation" class="ms-5">
                         <ul class="pagination pagination-rick-morty">
                             <li class="page-item" :class="{ disabled: currentPage === 1 }">
                                 <a class="page-link" @click="changePage(currentPage - 1)" href="#"
@@ -108,17 +113,11 @@
                     </nav>
                 </div>
 
-                <div>
-                    <button id="abrirModal" class="mb-3">
-                        <h5>Open Favorites</h5>
-                    </button>
-                </div>
-
                 <dialog id="modal">
                     <div class="container mt-5">
                         <div class="d-flex justify-content-center gap-3 border-dark row" id="favs">
                             <h2 class="text-light text-center w-100">Favorites</h2>
-                            <p v-if="favoritos.length === 0">No favorites to show</p>
+                            <p v-if="favoritos.length === 0" class="text-light text-center mb-5">No favorites to show</p>
                             <div v-for="character in favoritos" :key="character.id" class="col-5">
                                 <div class="card border-dark">
                                     <img :src="character.image" class="card-img-top" :alt="character.name">
@@ -136,10 +135,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <button id="cerrarModal" class="">Close favorites</button>
-                        </div>
+                            <div class="d-flex justify-content-center">
+                                <button id="cerrarModal" class="">Close favorites</button>
+                            </div>
+                        </div> 
                     </div>
                 </dialog>
 
