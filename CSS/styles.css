@@ -416,10 +416,6 @@ header.sticky-top {
     margin-bottom: 40px;
 }
 
-#detailsApp {
-    width: 100%;
-}
-
 .universe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

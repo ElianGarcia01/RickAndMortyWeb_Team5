@@ -224,6 +224,10 @@ footer h3 {
     /* Color del placeholder */
 }
 
+#detailsApp {
+    max-width: 600px;
+}
+
 @media (max-width: 768px) {
     .col-md-6 {
         flex: 0 0 100%;

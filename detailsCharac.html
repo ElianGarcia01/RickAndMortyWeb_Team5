@@ -50,14 +50,14 @@
         </header>
 
         <main>
-            <!-- SECCION DE TARJETA -->
-            <div class="d-flex justify-content-center mt-4" id="tarjeta">
-                <div id="detailsApp" class="my-5 card mb-3 w-50 border-dark">
-                    <div v-if="character" class="row g-0">
-                        <div class="col-md-5 ">
+            <!-- SECCIÓN DE TARJETA -->
+            <div class="d-flex justify-content-center mt-4">
+                <div id="detailsApp" class="card mt-5 w-100">
+                    <div v-if="character" class="row g-0 d-flex flex-column align-items-center justify-content-center">
+                        <div class="col-12 col-md-6">
                             <img :src="character.image" class="card-img-top h-100 w-100" :alt="character.name">
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-12 col-md-6 my-3 d-flex flex-column align-items-center">
                             <div class="card-body text-center rick-morty-card">
                                 <h5 class="card-title">{{ character.name }}</h5>
                                 <p class="card-text"><strong>Especie:</strong> {{ character.species }}</p>
@@ -67,11 +67,10 @@
                                 <p class="card-text"><strong>Ubicación actual:</strong> {{ character.location.name }}
                                 </p>
                                 <div class="d-flex flex-column align-items-center">
-                                    <a href="./Characters.html"
-                                        class="btn btn-dark w-50 btn-primary">Back to
+                                    <a href="./Characters.html" class="btn btn-dark w-75 btn-primary">Back to
                                         Characters</a>
                                     <br>
-                                    <a href="./Locations.html" class="btn btn-dark w-50 btn-secondary">Go to
+                                    <a href="./Locations.html" class="btn btn-dark w-75 btn-secondary">Go to
                                         locations</a>
                                 </div>
                             </div>
@@ -80,9 +79,12 @@
                     <div v-else class="loading-container d-flex justify-content-center">
                         <div class="loading-spinner"></div>
                         <h4 class="loading-text">Loading character details...</h4>
-                    </div>                    
+                    </div>
                 </div>
             </div>
+
+
+
 
         </main>
 
