@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-#container_principal {
+.container_principal {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -158,8 +158,9 @@ footer h3 {
     /* Texto blanco para mantener la visibilidad */
 }
 
+/* Boton details */
 .card .details-button {
-    border: 2px solid #97ce4c;
+    border: 2px solid #ac36e7fb;
     /* Verde Rick and Morty */
     background-color: #202329;
     /* Fondo oscuro */
@@ -168,6 +169,23 @@ footer h3 {
 }
 
 .card .details-button:hover {
+    background-color: #97ce4c;
+    /* Verde al pasar el mouse */
+    color: #202329;
+    /* Texto oscuro para contrastar con el verde */
+}
+
+/* Boton favoritos */
+.card .favoritos-button {
+    border: 2px solid #97ce4c;
+    /* Verde Rick and Morty */
+    background-color: #202329;
+    /* Fondo oscuro */
+    color: #ffffff;
+    /* Texto blanco */
+}
+
+.card .favoritos-button:hover {
     background-color: #97ce4c;
     /* Verde al pasar el mouse */
     color: #202329;
@@ -227,9 +245,10 @@ footer h3 {
 }
 
 .rick-morty-card:hover {
-    background-color: rgba(77, 198, 200, 0);
+    background-color: rgba(180, 30, 194, 0.216);
     border-style: solid 90px;
     transform: scale(1.05);
+    text-decoration: dotted;
 }
 
 .rick-morty-card img {
@@ -250,9 +269,20 @@ footer h3 {
     /* Morado para el título */
 }
 
+.rick-morty-card .card-title:hover {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3de22b;
+    /* Morado para el título */
+}
+
 .rick-morty-card .card-text {
     font-size: 1rem;
     margin-bottom: 0.5rem;
+}
+
+.rick-morty-card .card-text:hover {
+    color: #000000;
 }
 
 .rick-morty-card .btn-primary {
@@ -341,5 +371,3 @@ footer h3 {
         padding: 1rem;
     }
 }
-
-/*Seccion modal*/

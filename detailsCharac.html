@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div id="container_principal">
+    <div class="container_principal">
         <header class="sticky-top">
             <!-- AQUI COMIENZA LA BARRA DE NAVEGACION DEL HEADER -->
             <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
@@ -54,7 +54,7 @@
             <div class="d-flex justify-content-center mt-4" id="tarjeta">
                 <div id="detailsApp" class="my-5 card mb-3 w-50 border-dark">
                     <div v-if="character" class="row g-0">
-                        <div class="col-md-5">
+                        <div class="col-md-5 ">
                             <img :src="character.image" class="card-img-top h-100 w-100" :alt="character.name">
                         </div>
                         <div class="col-md-7">
@@ -67,15 +67,20 @@
                                 <p class="card-text"><strong>Ubicación actual:</strong> {{ character.location.name }}
                                 </p>
                                 <div class="d-flex flex-column align-items-center">
-                                    <a href="javascript:window.history.back()" class="btn btn-dark w-50 btn-primary">Back to
+                                    <a href="./Characters.html"
+                                        class="btn btn-dark w-50 btn-primary">Back to
                                         Characters</a>
                                     <br>
-                                    <a href="./Locations.html" class="btn btn-dark w-50 btn-secondary">Go to locations</a>
+                                    <a href="./Locations.html" class="btn btn-dark w-50 btn-secondary">Go to
+                                        locations</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div v-else class="alert alert-warning">Loading character details...</div>
+                    <div v-else class="loading-container d-flex justify-content-center">
+                        <div class="loading-spinner"></div>
+                        <h4 class="loading-text">Loading character details...</h4>
+                    </div>                    
                 </div>
             </div>
 

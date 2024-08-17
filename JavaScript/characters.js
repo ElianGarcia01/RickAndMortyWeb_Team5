@@ -147,6 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
   populateSlider(images, 10); // Ajusta el número de repeticiones según sea necesario
 })
 
+// Ventana Modal
 const abrirModal = document.querySelector('#abrirModal')
 const cerrarModal = document.querySelector('#cerrarModal')
 const modal = document.querySelector('#modal')

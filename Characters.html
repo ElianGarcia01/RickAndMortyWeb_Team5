@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="container_principal">
+    <div class="container_principal">
         <header class="sticky-top">
             <!-- Barra de navegación -->
             <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
@@ -109,7 +109,9 @@
                 </div>
 
                 <div>
-                    <button id="abrirModal" class="mb-3">Open Favorites</button>
+                    <button id="abrirModal" class="mb-3">
+                        <h5>Open Favorites</h5>
+                    </button>
                 </div>
 
                 <dialog id="modal">
@@ -135,7 +137,9 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="cerrarModal" class="">Close favorites</button>
+                        <div class="d-flex justify-content-center">
+                            <button id="cerrarModal" class="">Close favorites</button>
+                        </div>
                     </div>
                 </dialog>
 
@@ -151,17 +155,19 @@
                 <div v-if="filteredCharacters.length > 0" class="row">
                     <div v-for="character in filteredCharacters" :key="character.id"
                         class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
-                        <div class="card rick-morty-card">
+                        <div class="card ">
                             <img :src="character.image" class="card-img-top" :alt="character.name">
-                            <div class="card-body text-center">
+                            <div class="card-body text-center rick-morty-card">
                                 <h5 class="card-title">{{ character.name }}</h5>
                                 <p class="card-text">Species: <span>{{ character.species }}</span></p>
                                 <p class="card-text">Status: <span>{{ character.status }}</span></p>
                                 <p class="card-text">Gender: <span>{{ character.gender }}</span></p>
                             </div>
                             <div class="card-footer bg-dark text-center">
-                                <a :href="'detailsCharac.html?id=' + character.id" class="btn btn-dark">Details</a>
-                                <a v-on:Click="agregarFavoritos(character)" class="btn btn-danger m-2">Favorite</a>
+                                <a :href="'detailsCharac.html?id=' + character.id"
+                                    class="btn btn-dark details-button">Details</a>
+                                <a v-on:Click="agregarFavoritos(character)"
+                                    class="btn favoritos-button m-2">Favorite</a>
                             </div>
                         </div>
                     </div>
