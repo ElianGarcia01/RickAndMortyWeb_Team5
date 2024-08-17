@@ -638,6 +638,11 @@ main::before {
     /* Altura mínima de la ventana gráfica */
 }
 
+.busqueda {
+    height: 30vh;
+}
+
+
 #footer {
     margin-top: auto;
 }

@@ -135,6 +135,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Llama a la función con las imágenes y el número de veces que quieres repetirlas
   populateSlider(images, 10); // Ajusta el número de repeticiones según sea necesario
-});
-
-
+})
