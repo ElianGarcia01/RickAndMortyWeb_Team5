@@ -226,6 +226,12 @@ footer h3 {
     /* Sombra sutil */
 }
 
+.rick-morty-card:hover {
+    background-color: rgba(77, 198, 200, 0);
+    border-style: solid 90px;
+    transform: scale(1.05);
+}
+
 .rick-morty-card img {
     object-fit: cover;
     border-top-left-radius: 12px;
