@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', async function () {
   // Obtener episodios de la Season 1 (ID 1-11)
   const promises = [];
   for (let i = 1; i <= 11; i++) {
-      promises.push(fetch(`https://rickandmortyapi.com/api/episode/${i}`).then(res => res.json()));
+      promises.push(fetch(`https://rickandmortyapi.com/api/episode/${i}`).then(res => res.json()))
   }
-  const episodes = await Promise.all(promises);
+  const episodes = await Promise.all(promises)
 
   // Función para crear una card para cada episodio
   function createEpisodeCard(episode, index) {
-      const initialImage = episodeImages[index % episodeImages.length];
-      const hoverImage = episodeImages[(index + 1) % episodeImages.length];
+      const initialImage = episodeImages[index % episodeImages.length]
+      const hoverImage = episodeImages[(index + 1) % episodeImages.length]
 
       return `
          <div class="col-md-3 mb-4">
@@ -61,8 +61,11 @@ document.addEventListener('DOMContentLoaded', async function () {
                  <img src="${initialImage}" class="card-img-top" alt="${episode.name}">
                  <div class="card-body d-flex flex-column justify-content-center align-items-center">
                      <h5 class="card-title mb-3">${episode.name}</h5>
-                     <p class="card-text">Air Date: ${episode.air_date}</p>
                      <p class="card-text">Episode: ${episode.episode}</p>
+                     <p class="card-text">Air Date: ${episode.air_date}</p>
+                 <div class="card-footer">
+                     <a href="javascript:window.history.back()" class="btn btn-dark m-2">Go to back</a>
+                 </div>
                  </div>
              </div>
          </div>
@@ -72,31 +75,31 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   // Función para mostrar episodios
   function displayEpisodes(episodesToDisplay) {
-      let row = '<div class="row">';
+      let row = '<div class="row">'
       episodesToDisplay.forEach((episode, index) => {
-          row += createEpisodeCard(episode, index);
+          row += createEpisodeCard(episode, index)
           if ((index + 1) % 4 === 0) {
-              row += '</div><div class="row">';
+              row += '</div><div class="row">'
           }
-      });
-      row += '</div>';
-      episodesContainer.innerHTML = row;
+      })
+      row += '</div>'
+      episodesContainer.innerHTML = row
 
       // Agregar eventos de mouseover y mouseout para las cards
-      const cards = document.querySelectorAll('.card');
+      const cards = document.querySelectorAll('.card')
       cards.forEach(card => {
-          const imgElement = card.querySelector('.card-img-top');
-          const originalImage = card.dataset.originalImage;
+          const imgElement = card.querySelector('.card-img-top')
+          const originalImage = card.dataset.originalImage
           const hoverImage = card.dataset.hoverImage;
 
           card.addEventListener('mouseover', () => {
               imgElement.src = hoverImage;
-          });
+          })
 
           card.addEventListener('mouseout', () => {
               imgElement.src = originalImage;
-          });
-      });
+          })
+      })
   }
 
   // Mostrar episodios al cargar la página
@@ -104,21 +107,21 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   // Otros event listeners para la búsqueda y filtrado...
   searchForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const searchTerm = searchInput.value.trim();
+      e.preventDefault()
+      const searchTerm = searchInput.value.trim()
       const filteredEpisodes = filterEpisodesByName(searchTerm);
-      displayEpisodes(filteredEpisodes);
+      displayEpisodes(filteredEpisodes)
   });
 
   sortSelect.addEventListener('change', function () {
       const order = sortSelect.value;
-      const sortedEpisodes = sortEpisodesByDate(order);
-      displayEpisodes(sortedEpisodes);
-  });
+      const sortedEpisodes = sortEpisodesByDate(order)
+      displayEpisodes(sortedEpisodes)
+  })
 
   // Funciones para filtrar y ordenar episodios
   function filterEpisodesByName(searchTerm) {
-      return episodes.filter(episode => episode.name.toLowerCase().includes(searchTerm.toLowerCase()));
+      return episodes.filter(episode => episode.name.toLowerCase().includes(searchTerm.toLowerCase()))
   }
 
   function sortEpisodesByDate(order) {
@@ -126,6 +129,6 @@ document.addEventListener('DOMContentLoaded', async function () {
           const dateA = new Date(a.air_date);
           const dateB = new Date(b.air_date);
           return order === 'asc' ? dateA - dateB : dateB - dateA;
-      });
+      })
   }
-});
+})

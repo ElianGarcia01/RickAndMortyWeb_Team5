@@ -66,6 +66,9 @@ document.addEventListener('DOMContentLoaded', async function () {
                      <p class="card-text">Air Date: ${episode.air_date}</p>
                      <p class="card-text">Episode: ${episode.episode}</p>
                  </div>
+                 <div class="card-footer">
+                     <a href="javascript:window.history.back()" class="btn btn-dark m-2">Go to back</a>
+                 </div>
              </div>
          </div>
      `;
