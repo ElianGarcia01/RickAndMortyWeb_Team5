@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,288 +15,252 @@
 </head>
 
 <body>
-    <div class="container_principal container-fluid" id="cont">
-        <header class="sticky-top">
+    <header class="sticky-top">
 
-            <!-- AQUI COMIENZA EL NAVBAR -->
-            <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand ms-3" href="index.html">
-                        <img class="image d-block w-100" src="./Recursos/logo-letras.png" alt="logo">
+        <!-- AQUI COMIENZA EL NAVBAR -->
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-3" href="index.html">
+                    <img class="image d-block w-100" src="./Recursos/logo-letras.png" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Characters.html">CHARACTERS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./Locations.html">LOCATIONS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./Episodes.html">EPISODES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./information.html">INFORMATION</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="bg-success bg-gradient">
+
+        <div id="carruselPrincipal" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!--SEASON-->
+                <div class="carousel-item active " id="temporadaCarrusel">
+                    <div class="container-md h-50 mt-2 mb-2">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-md-4">
+                                <img src="https://i.pinimg.com/originals/5a/f8/0b/5af80b1df4057cc10288c079dc826662.png"
+                                    class="img-fluid" alt="personaje">
+                            </div>
+                            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                <p class="cssFont_1 temporada-p">SEASON</p>
+                            </div>
+                            <div class="col-md-4 rick-morty-text">
+
+                                <div class="accordion rick-morty-text" id="accordionFlushExample">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--AWARDS -->
+                <div class="carousel-item">
+                    <div class="container-md h-50 mt-2 mb-2">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-md-4">
+                                <img src="https://movementstrategy.com/wp-content/themes/bigdrop-theme/mortyawardy/rick_warp.png"
+                                    class="img-fluid" alt="personaje">
+                            </div>
+                            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                <p class="cssFont_1 temporada-p">AWARDS</p>
+                            </div>
+                            <div class="col-md-4 rick-morty-text">
+                                <div class="card text-bg-dark">
+                                    <img src="https://hips.hearstapps.com/hmg-prod/images/rick-1537251449.jpg"
+                                        class="card-img" alt="...">
+
+                                    <div class="">
+                                        <h5 class="card-title text-center">Best Comedic TV Performance</h5>
+                                        <p class="card-text">Nominado: Justin Roiland</p>
+                                        <p class="card-text"><small>Year: 2013</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--VOICES-->
+                <div class="carousel-item">
+                    <div class="container-md h-50 mt-2 mb-2">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-md-4">
+                                <img src="https://images.squarespace-cdn.com/content/v1/54fc8146e4b02a22841f4df7/1572526448451-D7IGDPSKXNMEJOEP6LA1/Art+of+Rick+and+Morty+%28A2%29+-+41.png"
+                                    class="img-fluid" alt="personaje">
+                            </div>
+                            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                <p class="cssFont_1 temporada-p">VOICES</p>
+                            </div>
+
+                            <div class="col-md-4 rick-morty-text">
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <p><strong>Voice Rick in Englishs: Justin Hoilan</strong></p>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <p><strong>Voice Rick in Espanish:Juan Guzman </strong></p>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col">
+                                        <p><strong>Voice Morty in English:</strong> Justin Hoiland</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Voice Morty in Espanish:</strong>Eder la Barrera</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Estadísticas de Rick and Morty -->
+                <div class="carousel-item">
+                    <div class="container-md h-50 mt-2 mb-2">
+                        <div class="row g-4 align-items-center">
+                            <!-- Imagen del personaje -->
+                            <div class="col-md-4">
+                                <img src="https://images.squarespace-cdn.com/content/v1/54fc8146e4b02a22841f4df7/1572526448451-D7IGDPSKXNMEJOEP6LA1/Art+of+Rick+and+Morty+%28A2%29+-+41.png"
+                                    class="img-fluid" alt="personaje">
+                            </div>
+
+                            <!-- Título de estadísticas -->
+                            <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                <p class="cssFont_1 temporada-p">STATISTICS</p>
+                            </div>
+
+                            <!-- Contenido de estadísticas -->
+                            <div class="col-md-4 rick-morty-text">
+                                <div class="row mb-4">
+                                    <div class="col text-center">
+                                        <h4><strong>Characters</strong></h4>
+                                        <p class="statistic-number" data-target="826">0</p>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col text-center">
+                                        <h4><strong>Episodes</strong></h4>
+                                        <p class="statistic-number" data-target="51">0</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <h4><strong>Locations</strong></h4>
+                                        <p class="statistic-number" data-target="126">0</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Script para animar los números -->
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const counters = document.querySelectorAll('.statistic-number')
+                        counters.forEach(counter => {
+                            const updateCount = () => {
+                                const target = +counter.getAttribute('data-target')
+                                const count = +counter.innerText;
+
+                                const speed = 200;
+                                const increment = target / speed;
+
+                                if (count < target) {
+                                    counter.innerText = Math.ceil(count + increment);
+                                    setTimeout(updateCount, 20);
+                                } else {
+                                    counter.innerText = target;
+                                }
+                            }
+                            updateCount()
+                        })
+                    })
+                </script>
+            
+            <!-- Carousel -->
+            </div>
+            <button class="carousel-control-prev " type="button" data-bs-target="#carruselPrincipal"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="" style="color: black;"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselPrincipal"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="" style="color: black;"></span>
+            </button>
+        </div>
+    </main>
+
+    <!-- AQUI COMIENZA EL FOOTER -->
+
+    <footer class="text-center text-light" id="footer">
+        <div class="container">
+            <div class="row pt-4">
+                <div class="col-12 col-md-6 mb-4">
+                    <h3>MORE FROM RICK AND MORTY</h3>
+                    <ul class="list-unstyled d-flex justify-content-around">
+                        <li>
+                            <a target="blank" href="https://www.facebook.com/RickandMorty/?locale=es_LA"
+                                class="btn-social">
+                                <img class="icon_footer" src="./Recursos/facebook2.svg" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="blank" href="https://www.instagram.com/RickandMorty/" class="btn-social">
+                                <img class="icon_footer" src="./Recursos/instagram.png" alt="instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="blank"
+                                href="https://x.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+                                class="btn-social">
+                                <img class="icon_footer" src="./Recursos/twitter.png" alt="whatsapp">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Cartoon Network</h3>
+                    <a href="./index.html" class="btn-social">
+                        <img class="image" src="./Recursos/logo-letras.png" alt="cohort">
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="Characters.html">CHARACTERS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./Locations.html">LOCATIONS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./Episodes.html">EPISODES</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./information.html">INFORMATION</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main class="bg-success bg-gradient">
-
-            <div id="carruselPrincipal" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-
-                    <!--SEASON-->
-                    <div class="carousel-item active " id="temporadaCarrusel">
-                        <div class="container-md h-50 mt-2 mb-2">
-                            <div class="row g-4 align-items-center">
-                                <div class="col-md-4">
-                                    <img src="https://i.pinimg.com/originals/5a/f8/0b/5af80b1df4057cc10288c079dc826662.png"
-                                        class="img-fluid" alt="personaje">
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                    <p class="cssFont_1 temporada-p">SEASON</p>
-                                </div>
-                                <div class="col-md-4 rick-morty-text">
-
-                                    <div class="accordion rick-morty-text" id="accordionFlushExample">
-                                        
-
-
-
-
-
-
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!--AWARDS -->
-                    <div class="carousel-item">
-                        <div class="container-md h-50 mt-2 mb-2">
-                            <div class="row g-4 align-items-center">
-                                <div class="col-md-4">
-                                    <img src="https://movementstrategy.com/wp-content/themes/bigdrop-theme/mortyawardy/rick_warp.png"
-                                        class="img-fluid" alt="personaje">
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                    <p class="cssFont_1 temporada-p">AWARDS</p>
-                                </div>
-
-                                <div class="col-md-4 rick-morty-text">
-
-
-
-
-                                    <div class="card text-bg-dark">
-
-                                        <img src="https://hips.hearstapps.com/hmg-prod/images/rick-1537251449.jpg"
-                                            class="card-img" alt="...">
-
-                                        <div class="">
-                                            <h5 class="card-title text-center">Best Comedic TV Performance</h5>
-                                            <p class="card-text">Nominado: Justin Roiland</p>
-                                            <p class="card-text"><small>Year: 2013</small></p>
-                                        </div>
-                                    </div>
-
-
-
-
-
-
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                    </div>
-
-
-                    <!--VOICES-->
-                    <div class="carousel-item">
-                        <div class="container-md h-50 mt-2 mb-2">
-                            <div class="row g-4 align-items-center">
-                                <div class="col-md-4">
-                                    <img src="https://images.squarespace-cdn.com/content/v1/54fc8146e4b02a22841f4df7/1572526448451-D7IGDPSKXNMEJOEP6LA1/Art+of+Rick+and+Morty+%28A2%29+-+41.png"
-                                        class="img-fluid" alt="personaje">
-                                </div>
-                                <div class="col-md-4 d-flex justify-content-center align-items-center">
-                                    <p class="cssFont_1 temporada-p">VOICES</p>
-                                </div>
-
-                                <div class="col-md-4 rick-morty-text">
-                                    <div class="row mb-2">
-                                        <div class="col">
-                                            <p><strong>Voice Rick in Englishs: Justin Hoilan</strong></p>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-2">
-                                        <div class="col">
-                                            <p><strong>Voice Rick in Espanish:Juan Guzman </strong></p>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-2">
-                                        <div class="col">
-                                            <p><strong>Voice Morty in English:</strong> Justin Hoiland</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p><strong>Voice Morty in Espanish:</strong>Eder la Barrera</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Estadísticas de Rick and Morty -->
-<div class="carousel-item">
-    <div class="container-md h-50 mt-2 mb-2">
-        <div class="row g-4 align-items-center">
-            <!-- Imagen del personaje -->
-            <div class="col-md-4">
-                <img src="https://images.squarespace-cdn.com/content/v1/54fc8146e4b02a22841f4df7/1572526448451-D7IGDPSKXNMEJOEP6LA1/Art+of+Rick+and+Morty+%28A2%29+-+41.png"
-                    class="img-fluid" alt="personaje">
-            </div>
-
-            <!-- Título de estadísticas -->
-            <div class="col-md-4 d-flex justify-content-center align-items-center">
-                <p class="cssFont_1 temporada-p">STATISTICS</p>
-            </div>
-
-            <!-- Contenido de estadísticas -->
-            <div class="col-md-4 rick-morty-text">
-                <div class="row mb-4">
-                    <div class="col text-center">
-                        <h4><strong>Characters</strong></h4>
-                        <p class="statistic-number" data-target="826">0</p>
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col text-center">
-                        <h4><strong>Episodes</strong></h4>
-                        <p class="statistic-number" data-target="51">0</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col text-center">
-                        <h4><strong>Locations</strong></h4>
-                        <p class="statistic-number" data-target="126">0</p>
-                    </div>
+                    <p class="mt-2 copyright">&copy; 2024 Rick and Morty.</p>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-<!-- Script para animar los números -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const counters = document.querySelectorAll('.statistic-number');
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-
-                const speed = 200;
-                const increment = target / speed;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(updateCount, 20);
-                } else {
-                    counter.innerText = target;
-                }
-            };
-
-            updateCount();
-        });
-    });
-</script>
-
-
-
-
-
-
-
-
-                </div>
-                <button class="carousel-control-prev " type="button" data-bs-target="#carruselPrincipal" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="" style="color: black;"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carruselPrincipal" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="" style="color: black;"></span>
-                </button>
-
-            </div>
-        </main>
-
-        <!-- AQUI COMIENZA EL FOOTER -->
-
-        <footer class="text-center text-light" id="footer">
-            <div class="container">
-                <div class="row pt-4">
-                    <div class="col-12 col-md-6 mb-4">
-                        <h3>MORE FROM RICK AND MORTY</h3>
-                        <ul class="list-unstyled d-flex justify-content-around">
-                            <li>
-                                <a target="blank" href="https://www.facebook.com/RickandMorty/?locale=es_LA"
-                                    class="btn-social">
-                                    <img class="icon_footer" src="./Recursos/facebook2.svg" alt="facebook">
-                                </a>
-                            </li>
-                            <li>
-                                <a target="blank" href="https://www.instagram.com/RickandMorty/" class="btn-social">
-                                    <img class="icon_footer" src="./Recursos/instagram.png" alt="instagram">
-                                </a>
-                            </li>
-                            <li>
-                                <a target="blank"
-                                    href="https://x.com/RickandMorty?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
-                                    class="btn-social">
-                                    <img class="icon_footer" src="./Recursos/twitter.png" alt="whatsapp">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <h3>Cartoon Network</h3>
-                        <a href="./index.html" class="btn-social">
-                            <img class="image" src="./Recursos/logo-letras.png" alt="cohort">
-                        </a>
-                        <p class="mt-2 copyright">&copy; 2024 Rick and Morty.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-   
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
@@ -303,5 +268,3 @@
 </body>
 
 </html>
-
-
