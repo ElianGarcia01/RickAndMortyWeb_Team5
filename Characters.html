@@ -117,7 +117,7 @@
 
                 <dialog id="modal">
                     <div class="container mt-5">
-                        <div class="d-flex justify-content-center gap-3 border-dark" id="favs">
+                        <div class="d-flex flex-column justify-content-center gap-3 border-dark" id="favs">
                             <h2 class="text-light text-center w-100">Favorites</h2>
                             <p v-if="favoritos.length === 0" class="text-light text-center mb-5">No favorites to show</p>
                             <div v-for="character in favoritos" :key="character.id">
